@@ -1,0 +1,1079 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath,esint}
+\usepackage{geometry}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{arydshln}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepackage{float}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\newcommand{\Z}{{\mathbb Z}}
+\geometry{
+left=20mm,
+right=20mm,
+top=20mm,
+bottom=20mm,}
+
+
+\begin{document}
+
+\input{titlepage}
+
+
+\section*{Acknowledgements}
+We would like to thank Dr Niccolo' Salvatori for his ongoing advice and time throughout the project, as well as creating such an interesting brief. Our meetings with him were highly informative and helped our group to stay on the right track.
+
+We also thank Mrs Emma Lawsen for organising the King's Certificate project and providing invaluable help and advice all year, ensuring our project was produced to the best of our abilities. This has been an incredibly enriching project and will provide great help when we have to work on long projects or in groups in the future, and especially when researching.
+
+In addition, our thanks go to Ms Louisa Ellis for helping us to understand complicated mathematics, without whom we would have been very stuck.
+
+\section*{Abstract}
+This paper will analyse Gauss' impact on mathematics by exploring the relationships he had with his contemporary mathematicians and put that into the context of his life. In addition, a number of his discoveries from multiple disciplines are explained and derived, with a particular focus on his Least Squares method, which is derived, explained and its uses and limitations are evaluated.
+
+
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduction}
+\begin{center}
+    \textit{``Mathematics is the queen of science and arithmetic the queen of mathematics"}
+    \newline {\small Carl Friedrich Gauss, known as `The Prince of Mathematics'}.
+\end{center}
+The 1800s was arguably the most significant century in the history of mathematics, and it is conceivable to say one man contributed more than any other. Carl Friedrich Gauss laid the foundations for modern mathematics, including how proofs are constructed and why they are needed. His results still have a vital impact on mathematics and science today, in fields as wide as general relativity \cite{radioscience} to cartography \cite{cartography}.
+
+Gauss was a 18th – 19th century mathematician and physicist who explored a wide range of topics. For example, in algebra, he proved Fermat's Last Theorem for when \(n=5\); in statistics, the normal distribution curve is also called a Gaussian distribution, where he derived the normal distribution as a generalisation of the binomial theorem; and in electrodynamics, he formulated Gauss' law which predicts the distribution of electrical charges in electric fields. Throughout his life Gauss contributed to many fields, starting with his creation of number theory, then later in his life moving to geometry, astronomy and physics \cite{princeofmathematics}.
+
+In order to gain a comprehensive understanding of Gauss, we will bring together knowledge surrounding his life, fellow mathematicians and significant discoveries, as well as this paper’s focus, his Least Squares method. Therefore, we will investigate Sophie Germain, a French female mathematician who particularly studied Gauss' number theory and contributed to Fermat's Last Theorem; Eisenstein, one of Gauss' great friends; and Farkas and János Bolyai, who were both close associates of Gauss when he was at university. We have chosen these four mathematicians to research more thoroughly based on their close connection to Gauss and our own interest in them respectively, especially Sophie Germain who managed to overcome many cultural barriers.
+
+We will also explore the history and rivalry between another fellow mathematician, Adrien-Marie Legendre, and Gauss, who had arguments over who created the law and proof of quadratic reciprocity first; in addition, this paper will study another rivalry between them about the Least Squares method, and the possible influence of Legendre on Gauss’ 1809 paper on the method, analysing who was more significant regarding the contributions towards it.  
+
+After researching Gauss’ contemporaries, which provides context for his discoveries, this paper will focus on Gauss' Least Squares method, which he used for calculating the orbit of Ceres. The Least Squares method finds the line of best fit for data by minimising the sum of the squares of the differences between a data point and its value due to the regression line. As this method can be used to find a linear or a parabolic function, it is ground-breaking in the field of statistical analysis in allowing a regression line to be constructed to multiple degrees of polynomials. This allows trends in data to be investigated, predictions to be made with improved accuracy, and more detailed comparisons to be made between data sets. 
+
+Overall, this paper will present a deep understanding of Gauss as a person, and the relationships that he had with his contemporaries. As a group, we will present his revolutionary Least Squares method, understand it, and begin to apply it outside of a purely mathematical environment. This is a significant project for us to undertake and present so that we can have a holistic understanding of the life and works of the man known as the forefather of mathematics. We also hope to share many of the interesting discoveries Gauss made in a large variety of fields to demonstrate his lasting impact on mathematics and the wider sciences. 
+
+% edit this last paragraph
+
+\section{Literature Review}
+Gauss was a very influential figure in mathematics and due to this there was a significant amount of research that needed to be conducted. We decided to delve into three main topics: Gauss' life and his relationship with other mathematicians, Gauss' other work such as the Eureka Theorem, and the actual Least Squares method. There have been numerous articles on Gauss and his work, meaning it has been difficult to determine which sources we should use. The articles regarding the mathematics behind Gauss' work are rather complicated; therefore, in our article we hope to more concisely explain his methods, in order to improve comprehension and understanding for the reader. 
+
+To begin, we found an article that gave a general overview of Gauss' life and achievements to explore the direction to which we can take our project. In \textit{The Annals of Statistics} \cite{stigler}, Stephen M Stigler explores Gauss' life and how he developed the Least Squares method, as well as reviewing sources regarding other important discoveries made by Gauss and fellow mathematicians of that era. The article employs the use of many different papers from a variety of mathematicians to analyse the timescales of the discoveries around and including the Least Squares method, as well as the progression of Gauss' life to the point of discovery. Stigler and his credentials make him and the information included within the article very credible, as it written by a researching professor in the Department of Statistics at the University of Chicago and is intended for use by other researchers and professors. This article aims to describe the works of Gauss and evaluate other sources that describe the works of other mathematicians such as Robert Adrain and Adrien-Marie Legendre. This will be useful, to some extent, in our project as it will greatly supplement the knowledge we have about the life of Gauss and his relationships with other mathematicians and will help our understanding when describing the historical aspect of our project.
+
+From here, we continued to explore the historical aspect of our project, establishing Gauss' relationship with his contemporary mathematicians. Our next article looked at the life of Sophie Germain, a mathematician he corresponded with often, and on whom we decided to focus. The article \cite{germaincorrespondence} for Sophie Germain was written by Andrea Del Centina, who works in the University of Ferrara for the Department of Mathematics and Computer Science. He has published multiple articles about Sophie Germain and her work, including `Unpublished manuscripts of Sophie Germain and a revaluation of her work on Fermat's Last Theorem' \cite{germainmanuscripts}, which have been cited many times, increasing his credibility as a source. This article focuses on the communication between Germain and Gauss, and the impact she had on furthering Gauss' work: for instance, his book called \textit{Disquisitiones Arithmeticae}. The article goes into great detail about the letters between Gauss and Germain. It highlights the contributions that Germain had on Fermat's Last Theorem and is very useful in showing Gauss' relationships with other mathematicians at the time. This will be used to establish how Gauss worked with other mathematicians. The limitations of the source, however, are that it is quite repetitive, creating difficulties comprehending the contents on the first reading. While the source is initially quite challenging, its information is important and useful, therefore the structure does not have a significant detrimental impact. Whilst there is no guarantee that the source is unbiased because it is based on a historical point of view, the article stays focused on the contents of the letters rather than making assumptions about either Gauss or Germain. The intended audience is likely to be for university students who have an interest in history and mathematics, along with many derivations and proofs. 
+
+As well as his work on Fermat's Last Theorem, we decided to investigate some of Gauss' other discoveries, including his polygonal number theorem, also known as the Eureka Theorem. Unlike our source about Sophie Germain, our source about the Eureka Theorem, `Polygonal numbers', focused heavily on the mathematical proof behind it, which provides a different, but useful nonetheless, insight into our project brief, preparing us to explain many of Gauss' discoveries to an audience of non-specialists. The thesis \cite{polygonalnumbers} was written by Overtone Chipatala for the degree Master of Science from Kansas State University. Chipatala states that ``...The primary purpose of this report is to define and discuss polygonal numbers in application and relation to some of these concepts." Among other aspects, the thesis includes an explanation of the sums of squares, including Lagrange's Four Squares Theorem and Legendre's Three Squares Theorem. The report also ``introduces and proves its main theorems; Gauss' Eureka Theorem and Cauchy's Polygonal Number Theorem". We found the section on Gauss' Eureka theorem and the section on Legendre's theorem, since it is used in the Eureka theorem, very useful for our research on Gauss. It displays and explains a simple mathematical proof of the theorem and nicely shows how it fits in with the rest of the topic. However, it is only helpful in learning the pure mathematics and not for understanding more about Gauss, and only two of the sections within the report are directly useful to our research although the remainder of the report may help to understand Gauss' mathematical results more generally. This report widened our understanding surrounding and allowed us to explain the Eureka Theorem and the theorems it was built on, which is one of Gauss' discoveries that we are interested in. 
+
+From Polygonal numbers, we shifted our focus to the Least Squares method and used a highly useful article that describes the Least Squares method. This was arguably his magnum opus and we wanted to ensure that our knowledge and understanding of this highly influential method was secure and true to his original discovery. In `Method of Least Squares' \cite{abdi}, Hervé Abdi explains Gauss' method of Least Squares, as well as discussing a weighted variation and the problems with the method, such as its overreliance on a lack of anomalous results. The author aims to introduce statistical methods, focusing on how to calculate a regression line for linear data, and mentioning introductory methods to weight the data to get a more accurate line of best fit. Abdi is a reliable source to learn from as he has published over 200 papers and twelve books as well as teaching classes on statistical analysis. For our project, the article is particularly useful as it is a good starting place to understand Gauss' method, why it works, and how it can be adapted to different contexts. The main limitation is that it is intended for a wide and general population with little to no prior knowledge of statistics, so does not explore non-linear data in any depth or provide sufficient information about the limitations of the method. Therefore, this article will not form a major part of our research as there is not much depth, but it is a useful bridging source, allowing us to understand more complex articles, knowing how the method works. 
+
+In the twenty-first century, Gauss' method has become important to the analysis of statistical data in economics and social sciences, despite the mathematician first having applied the principle in astronomy. Both the source used in the previous paragraph and the one used in the following discuss the Least Squares method, with the former explaining the method and the latter exploring its implications. Richard Routledge's 2005 article \cite{routledge} on the Least Squares Approximation provides a broad overview of how Gauss' method for estimating the true value of some quantity, based on a consideration of errors in observations or measurements, is used in mathematics. Routledge's article highlights one of the first applications of Gauss' Least Squares method, settling a controversy regarding the shape of the Earth. The article focuses on explaining how previous scientists such as Newton had believed the Earth was shaped as a `lemon' or a `grapefruit', but Routledge also speaks on the limitations of attempting to resolve this dispute. Despite a prominent level of learning being required to fully understand how Gauss' method is used in statistics, the author can show how, due to an inability to gain completely accurate measurements, Least Squares Approximation can be used to minimize deviations even with several large error estimates. Other articles, such as Leorah Weiss' paper on Gauss and Ceres \cite{historyofmaths}, go into greater depth in explaining how exactly `the orbit of a heavenly body may be determined' from good observations or more generally, how a set of results can be used to determine something's true value. 
+
+In conclusion, we have outlined the main sources we will use in our academic article, covering all aspects of our research. We have chosen to incorporate a wide range of sources in our research which varies from Gauss' life and the timeline of discoveries leading up to discovery of the Least Squares method \cite{stigler}, through to his relationships with other mathematicians such as Sophie Germain \cite{germaincorrespondence}. This guarantees we can evaluate the historical side of our project well and in depth. We also ensured we incorporated articles that include the mathematical side of our project, even though they are limited due to a complex level of mathematics being required to fully understand the method. From here, we have a solid comprehension of the context in which Gauss made his highly influential discoveries, so we can continue to research their impacts on modern science and mathematics. 
+
+\section{Methodology}
+\subsection{Method}
+
+This research paper will explore Gauss’ life and contributions to mathematics before focusing on his Least Squares method, explaining how it works and its impact in multiple areas of statistics and science. The project brief was very open-ended, so we chose to explore a limited number of his discoveries, relationships with other mathematicians and impacts of his Least Squares method, all of which were chosen after initial research. We chose these topics as we felt that they encapsulated Gauss as a person and his effect on his field the most. We used biographies on Gauss to obtain a shortlist of potential topics to study, which we then narrowed down based on their influence on Gauss and wider mathematics, our own personal interest, and accessible information on it.  
+
+In addition, we derived the Least Squares method, analysed its benefits and limitations, created a simple program to implement it and investigated its uses throughout history to the modern day. Each stage of our program was only developed once we had a good grounding in the mathematical theory and could carry it out by hand, to be able to perform quality checks of our outputs. The code consisted of inputting data, which, using the Least Squares method could be turned into simultaneous equations, and then were solved using matrices. As our project developed, we optimised our code, and relied less on built-in functions of the software by coding our own methods. 
+
+Much of our project centred around secondary research, such as reading biographies of Gauss or other mathematicians, and papers analysing the impact of his discoveries, so ensuring that we always kept a note of our sources allowed ease of referencing when necessary. In addition, as many of Gauss’ discoveries are very complicated, we ensured that we fully understood them by looking at entry-level sources, such as introductory textbooks, before continuing our research. Also, we made high-quality notes when conducting the first stage of research for any topic, to avoid duplicating work, and for each section or focus, where possible, multiple people were involved, allowing a broad range of ideas to be present and challenging all members to consider how their work will be interpreted by third parties. This was especially useful when considering information that was not very clear-cut, such as historical disputes about who developed certain methods first, including the Least Squares. 
+
+\subsection{Plan}
+At the beginning of our research, we created a plan to ensure that we stayed on focus, met all our deadlines, divided the research considering other commitments and did not take on more work than we could handle, all of which is summarised in the abridged Gantt chart displayed as Figure \ref{ganttchart} below. Using this chart, we always had work to complete, and were aware of any impending deadlines. It details the overarching sections and the order of our research, paper, and presentation, which we then assigned to several weeks, bearing in mind times when we would be more, or less, able to take on work, such as holidays or examination weeks. Moreover, it has a clear structure, meaning we did not attempt anything we did not have the prior knowledge or research for, such as the program for the Least Squares before we knew how to derive it. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.7\textwidth]{Images/gantt chart.png}
+  \caption{Abridged Gantt Chart}
+  \label{ganttchart}
+\end{figure}
+
+We divided the work at each stage to play to each of our unique strengths and interests, for example as Carys has experience with statistics, she focused more researching the mathematical aspects, Alisha’s interest in Sophie Germain meant she would research Gauss' relationship with her and her impact, and with Jess’ strength in coding, they paved the way for the planning of the program for the Least Squares method. These tasks were assigned at our weekly or bi-weekly meetings, which guaranteed that all members of the group were kept up-to-date and involved in every stage of the project and all members were involved in any decision-making to avoid conflicts within the group. To ensure each group member knew exactly what they were doing, we kept a record with each person's tasks written clearly, and an excerpt of this is shown below as Figure \ref{tasklist}. Although no one member worked solely on one aspect of the project, as it progressed, we specialised to ensure continuity between different sections, including Carys and Nikhil focusing on researching in detail and summarising the knowledge in bullet points, Alisha and Akiele on writing these up, and Jess on editing the written works. In addition, throughout the time period, we developed our skills in researching, writing, editing, and formatting, such as transitioning from typical document packages to using LaTeX for our final paper.
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.6\textwidth]{Images/task list.png} 
+    \caption{Excerpt from the task list }
+    \label{tasklist}
+\end{figure}
+
+\subsection{Important concepts}
+
+As a considerable proportion of the project deals with Gauss’ Least Squares method, and general statistical analysis, some knowledge should be presupposed. The aim of methods such as Gauss’ is to take a set of bivariate data and plot a ‘line-of-best-fit', also known as a regression line, which may be linear or a polynomial for our intents, which should, as accurately as possible, predict the behaviour of any additional data points within the range of data. When considering any method to find a regression line, some considerations include how much weighting to give to anomalous values and what degree polynomial would be appropriate. This is especially important in small data sets as, using polynomial interpolation, for n+1 data points, a polynomial of degree less than or equal to n can be found which exactly matches the data \cite{meijering}, so while it is tempting to increase the degree of the polynomial to become more accurate, this is not always optimal as it may less accurately predict later data, even if seemingly perfect for the current data.
+
+In addition, some background knowledge of the mathematical environment in which Gauss was working would be useful to contextualise his life. In the 18th and 19th century, children were seen as not being entitled to education in general, let alone have the right to free education, and so it was expensive to stay in education, even for geniuses such as Gauss \cite{menofmaths}. Women and girls were systematically denied education to the same level as men and boys, and even were banned from holding positions of educational authority, despite having proven themselves as much as any male candidates. Collaborative working as seen in many universities today was not as widespread, meaning mathematicians and scientists worked much more independently and more competitively. This combined with the fact that many mathematical breakthroughs were published in long books which took a long time to get published meant disputes over priority were not rare. Finally, methods of computation were clearly not around, so all mathematics had to be done by hand or with the assistance of objects such as logarithmic tables, leading to a high demand for methods to speed up any calculations. 
+
+
+\section{Initial Results}
+
+Before analysing Gauss' Least Squares method and its implications, we investigated the life of the mathematician before, during and after he made his significant discoveries, to gain a deeper understanding of his importance and the manner in which the successful mathematician came to be. 
+\subsection{Gauss' Life}
+
+Gauss was born on 30th April 1777 in Brunswick, Germany to a poor family \cite{menofmaths}. When in school, his schoolmaster’s assistant, Johann Martin Bartels, helped Gauss to study mathematics far beyond his age, and together they began the study of analysis. During this time, he studied the binomial theorem and considered the limitations of its well-known expansion as, due to a lack of rigorous proofs, absurdities arose from it, including that negative one equals infinity \cite{menofmaths}. As a young man, Gauss was said to have been “seized” by mathematics, to the point where he went silent and stood rigid, thinking about a problem until he solved it \cite{menofmaths}. At age 14, he met Carl Wilhelm Ferdinand, Duke of Brunswick, who recognised his talent and paid the bills for the rest of his education, becoming both a mentor and a close friend \cite{menofmaths}.
+
+By the time Gauss was 18, he had invented the method of Least Squares, and by 19 he gave the first proof of the Law of Quadratic Reciprocity \cite{menofmaths} (see Section 4.2.3 and Section 5.3.2 respectively). On 30th March 1796, Gauss began his \textit{Notizenjournal} \cite{menofmaths}, his scientific diary in which he noted many of his findings, even if they were not published or made public during his lifetime. For example, on 10th July 1796 he wrote down his Eureka theorem (see Section 5.3.1). Also, on 19th March 1797, Gauss discovered the double periodicity of certain elliptic functions \cite{menofmaths} and he would later go on to recognise the double periodicity in the general case. During this time, from October 1795 to September 1798, Gauss attended the University of G\"{o}ttingen, where he made friends with Farkas Bolyai (see Section 4.2.1) \cite{menofmaths}. By the end of his time at university, his masterpiece, \textit{Disquisitiones Arithmeticae}, was almost complete, but due to press complications, it was not published until September 1801 \cite{menofmaths}. 
+
+After this, Gauss achieved a doctoral degree, producing the first proof of what is known as the Fundamental Theorem of Algebra, which is the idea that every algebraic equation with a single unknown has at least one root, real or complex (see 5.3.3) \cite{menofmaths}. With respect to complex numbers, he was one of the first mathematicians to give a clear explanation of complex numbers and describe them as points on a plane \cite{menofmaths}. Over the course of his life, Gauss gave four distinct proofs of the Fundamental Theorem of Algebra, the last when he was 70 \cite{menofmaths}. After publishing \textit{Disquisitiones Arithmeticae}, Gauss moved onto other fields of study as wide ranging as astronomy, electromagnetism, and statistics, however, notably, he never attempted Fermat’s Last Theorem \cite{menofmaths}. He believed that he could lay down “a multitude of such propositions, which one could neither prove nor dispose of" \cite{menofmaths}. 
+
+On 1st January 1800, Ceres was first spotted by astronomers, but in a position in which it was exceedingly difficult to measure \cite{menofmaths}. It then ‘disappeared’ leaving astronomers with no idea of where to find it again. Using the Least Squares method, Gauss completed complex calculations which predicted exactly where it ought to be further around its orbit, which was identical to the asteroid’s actual path \cite{menofmaths}. Similarly, he accurately predicted the path of the Great Comet of 1811 \cite{menofmaths}. In a letter to his friend, Bessel, in 1811, Gauss stated, in essence, the Fundamental Theorem of Analytic Functions: the theory of which is still used today in understanding fluid motion \cite{menofmaths}. The following year, Gauss published work on the hypergeometric series and proved what parameters are required so that it converges \cite{menofmaths}.
+
+In Gauss’ personal life, he married Johanne Osthoff on 9th October 1805, with whom he had three children. After her death, he married Minna Waldeck on 4th August 1810 and had a further three children \cite{menofmaths}. On the 10th November 1806, the Duke Ferdinand died, and so to keep a source of income, Gauss became the director of the G\"{o}ttingen Observatory \cite{menofmaths}. Other than a few notable exceptions, such as Sophie Germain, who worked on Fermat’s Last Theorem, Gauss was said to be lacking in cordiality to younger mathematicians. For instance, Cauchy’s discoveries in the field of complex functions were ignored by Gauss, or his silence on Hamilton’s work on quaternions in 1852 \cite{menofmaths}. 
+
+From 1821 to 1848 Gauss was a scientific advisor to the Hanoverian and Danish governments, and while in the 1820s, his interests surrounded geodesy – the study of the Earth’s shape – and surface theory, by the 1830s, he was focusing more on mathematical physics, particularly electromagnetism and attraction (see Section 5.3) \cite{menofmaths}. Throughout these two decades, Gauss demonstrated his capabilities in invention, including the heliotrope in 1821, a device which could almost instantly transmit signals using reflected light. In 1833 he invented both the magnetometer, which could detect the absolute magnetic intensity at a point in space, and the electric telegraph \cite{menofmaths}. From around 1841 onwards, Gauss turned his attention to topology and the geometry of complex variables, before dying peacefully on 23rd February 1855 aged 77 \cite{menofmaths}. 
+
+\subsection{Relationship with mathematicians}
+
+Throughout his lifetime, the German collaborated with many other mathematicians and scientists who in turn also had a considerable impact on the subjects we study today, including the often overlooked female mathematician, Sophie Germain. Furthermore, though Gauss cooperated with many mathematicians, he also managed to gain rivals, most notably the French mathematician Legendre, arguably Gauss’ greatest challenger. To others, Gauss was an important mentor and inspiration, encouraging younger mathematicians such as Eisenstein to pursue the field. 
+
+However, it is fair to say that Gauss, despite being as important and renowned as he is, was also himself influenced by others. By being able to teach and learn from others, Gauss influenced and improved the field of mathematics and physics far beyond the scope of a single person. 
+
+\subsubsection{Colleagues}
+
+A close friend of Gauss, Farkas Bolyai, was a mathematician from Hungary, who was born on 9th February 1775 and is most well-known for his geometrical work. His philosophy professor at Kolozsvár College attempted to turn Bolyai away from mathematics and towards religious philosophy. Nevertheless, he decided to go overseas with Simon Kemény on a trip to pursue and practice mathematics extensively in Germany \cite{stigler}. 
+
+While abroad in 1796, Bolyai met Gauss, who was also a student in G\"{o}ttingen, engrossed in his mathematical studies. The two held common interests in mathematics and geometry, devoting a great deal of time and effort to researching aspects of mathematics such as Euclidean geometry and the independence of the Fifth Postulate \cite{stigler}. He addressed these problems with Gauss, with his later writing demonstrating how important this relationship was to his mathematical progress \cite{abardia}. 
+
+Much of Bolyai’s work was centred in the principles of geometry and the parallel axiom. His major work, the Tentamen, was an attempt to establish a detailed and systematic basis of geometry, arithmetic, and algebra \cite{stigler}. The dilemma which perplexed Bolyai the most in his study of mathematics was about the independence of Euclid's Fifth Postulate. The Euclidean axiom, which is found in the Fifth Postulate in Book 1 of the Elements of Euclid, is comparable to the assertion that there exists only one line through a given point which is parallel to a given line (the given line not passing through the point) and to the assertion that there is a triangle in which the sum of the three angles is equivalent to two right angles and, thus, that all triangles have this exact same property \cite{lemley}. 
+
+In 1804, Bolyai believed that he had a proof that could be derived from the other axioms, but when he submitted his proofs to Gauss, he had noticed a mistake in Bolyai’s thesis. He ultimately gave up his efforts to prove its independence and instead sought an equivalent interpretation which was more readily understood through common sense \cite{stigler}.
+
+In Gauss’ letter on non-Euclidean geometry to Farkas Bolyai on 6th March 1832, he proposed that Bolyai should study complex numbers, therefore linking non-Euclidean geometry with them \cite{abardia}. Bolyai eventually gave up on non-Euclidean geometry and taught his son, János Bolyai, who later made considerable strides in the topic and was at the centre of Gauss’ praise for a time \cite{lemley}.
+
+\subsubsection{Mentees}
+
+Once Gauss had established himself as an excellent mathematician, inevitably, new mathematicians gravitated towards him for advice and mentoring. One of these mathematicians was Sophie Germain, who is mostly known for her work and research in mathematical physics and number theory. Throughout her life, she grew closer to and became a correspondent of Gauss'. When she was in her teenage years, she was forced to stay at home for much of the time, and her parents confiscated her candles, clothes, and any forms of heating to discourage her from pursuing mathematics \cite{fermat}. However, her solitude allowed her to study mathematics in more depth, particularly Gauss' \textit{Disquisitiones Arithmeticae}. For a few years she studied the book, trying to solve many of the exercises and making her own proofs for some of the theorems in the books.
+
+On 21st November 1804, Germain wrote her first letter to Gauss; the contents of the letter included praise for Gauss' \textit{Disquisitiones Arithmeticae}, along with some of her own ideas and results \cite{germaincorrespondence}. Gauss later responded, showing appreciation and wrote a letter to H.W. Oblers praising her work. Germain wrote her first three letters to Gauss under the fake name, `Mr Le Blanc'. However, in February 1807, she had to reveal her identity to Gauss due to the Napoleonic war, to protect him. In 1808, Gauss' interest turned to more applied mathematics, and he stopped replying to Germain; this led to her shifting her focus more to physics \cite{fermat}. 
+
+However, later in Germain's life, their correspondence resumed \cite{fermat}, and in May 1819, Germain wrote a letter to Gauss about Fermat’s Last Theorem. Her breakthroughs would go on to allow Legendre (Section 4.2.3) to prove it for \(n = 5\) and another mathematician, Lamé, to prove it for \(n = 7\) \cite{fermat}. In 1829, Sophie Germain wrote her last letter to Gauss, following a visit she received from a pupil of Gauss’ who delivered a copy of \textit{Theoria Residuorum Biquadraticorum} (which was about quadratic reciprocity) to her \cite{germaincorrespondence}. Not long later, she was diagnosed with breast cancer which meant she was unable to work anymore. 
+
+The known correspondence between Sophie Germain and Carl Gauss consists of fourteen letters, ten sent by Germain and four sent by Gauss, however some letters may have been lost after the death of Germain due to the war in France \cite{germaincorrespondence}. The letters and the mathematical notes written by Germain show that she was quick to understand the content of \textit{Disquisitiones Arithmeticae}, but also that she was able to achieve new results through her own initiative. 
+
+Unfortunately, due to her gender, she was prevented from obtaining an adequate university instruction, and she was also denied the opportunity to work in the academic world. This meant she often worked in isolation, without being guaranteed access to the scientific information within the Academy. She saw in her letters and relationship with Gauss the possibility of being recognised regardless of her gender. Gauss had appreciated her intelligence and admired that she knew how to confront and demonstrate theorems, which was a skill he had struggled with. 
+
+Another young mathematician was Gotthold Eisenstein, who had close contact with Gauss during their lifetimes. While Eisenstein was influential in his work, his economic situation was always critical. Throughout his years at university, he survived on short-term scholarships from the King, which he owed solely to the involvement and influence of Gauss and Alexander von Humboldt \cite{schmitz}. Gauss highly respected him, expressed high praise for Eisenstein’s papers and when Eisenstein visited G\"{o}ttingen for two weeks to see the German mathematician, he was treated exceptionally well. In 1847, Gauss even wrote a foreword to a collection of Eisenstein’s papers which was published as a book \cite{Schappacher1998}. 
+
+The two wrote to each other rather frequently, with their letters predominantly revolving around mathematics. Eisenstein usually started his letters with an apology to Gauss for stealing his time, one letter even starting with “The highest generosity and indulgence, with which Your Reverend Honor had the goodwill to accept my latest mathematical notes let me become so impudent, that I might dare to add the devoted request to...” \cite{schmitz}. He consistently used language showing how much he admired the German and would proceed to write multiple pages about his theorems \cite{schmitz}. It was clear Eisenstein respected Gauss just as Gauss did Eisenstein. At the age of 15, the mathematician purchased a copy of Gauss’ book and carried it with him to many places. His copy consisted of drafts of papers which were later published and a proof which may have inspired Riemann (his student)’s paper on the Zeta function \cite{riemann}.
+
+A significant piece of work that Eisenstein produced was based on a general proof of the law of Biquadratic Reciprocity \cite{schmitz}. Despite proving the principle in some crucial circumstances, Gauss was ultimately not the one to publish the proof. In 1844, the first proof to be published would be that of Gotthold Eisenstein. Eisenstein also provided four more proofs of the Biquadratic Reciprocity law, two of which had been founded on the principle of elliptical function \cite{collison}. While Gauss was the first one to explicitly state the law of Biquadratic Reciprocity, the theorem on cubic reciprocity did not originate from him. However, in 1846, Carl Jacobi, a friend of Gauss', accused Eisenstein of plagiarism, alleging that his proofs had been taught in Jacobi's lectures before his publication \cite{collison}. The original creator of the proofs is still disputed, and it is unknown whether Eisenstein truly stole Jacobi’s work.  
+
+Nevertheless, it is evident that in Eisenstein’s short life, he added much to the world of mathematics and completed enough work to be called a true mathematician. It is quite reasonable to say Gauss had a significant positive impact on Eisenstein. Moritz Cantor quotes Gauss as having said ‘there had been only three epoch-making mathematicians in all history: Archimedes, Newton and Eisenstein’ \cite{titan}. 
+
+\subsubsection{Rivalries}
+
+Being such an eminent mathematician, Gauss was sure to pick up a few rivals. His biggest and most public rivalry was with the equally famous Legendre, and they each contributed to mathematics in unique and pivotal ways. Our project, centring on the Least Squares Method in particular, would not be as riveting as it is if it were not for Legendre’s work. The French mathematician published the method in 1805, four years before Gauss \cite{stigler}. Initially, despite Gauss’ claim of having used the method since 1795, there was some disagreement in deciding who had truly originated the method \cite{stigler}. Lindenau and Von Zach were two astronomers who edited several articles regarding Gauss and Legendre to make it appear as though Gauss had no influence in developing the method, and supported the belief that it was Legendre who deserved sole credit for the method \cite{stigler}. However, there were those who thought otherwise, such as Olbers, who was convinced several years after 1805 that Gauss had the most influence in the origination of the Least Squares method \cite{stigler}. Legendre was the first to both understand the importance of the method and demonstrate the ability to communicate this to others. Furthermore, Legendre helped in bringing it to the attention of other mathematicians. Nevertheless, all credit cannot be given to Legendre as Gauss was important in bringing about new ways to apply the method, linking it to probability and providing algorithms. 
+
+In addition to their work on the Least Squares Method, both mathematicians also worked on the Law of Quadratic Reciprocity. Again, Legendre was the first to state this Law formally, using the work of previous mathematicians such as Euler \cite{weintraub}. In 1785, he produced eight theorems, though there are three pairs of essentially identical theorems, leaving five individual cases. He managed to solve two cases unconditionally, but the remaining cases rely on an extra hypothesis which he could not prove \cite{weintraub}. Later in 1801, Gauss managed to prove the general law of quadratic reciprocity with two proofs and gave a third seven years later \cite{weintraub}. Yet, Legendre did not stop in 1785. Using the work of Jacobi, in 1830 he managed to form another proof (although Jacobi’s proof was, in effect, based on that of Gauss.) Both mathematicians stated that their proof was the simplest of all the proofs. Further to this, the French mathematician believed he was not given enough credit for the Law or the Least Squares method, claiming Gauss ‘[had] not hesitated to appropriate this method to himself’ \cite{standrewsbolyai}. 
+
+The two mathematicians, despite their rivalry, were extremely instrumental in providing new techniques in mathematics that are still applied today. Though there is no concrete evidence for which mathematician provided us with certain proofs, they laid the foundation for the world to transform mathematics; such a rivalry could not be described as damaging but instead fruitful. 
+
+Another prominent mathematician of the time, János Bolyai, son of Farkas Bolyai, had a unique relationship with Gauss; Bolyai was both a rival and later, a friend, before their relationship soured again. Born in 1802 in modern day Romania, Bolyai would become a key figure in the understanding of modern-day pure mathematics and for his work in geometry \cite{britannicajanos}. From a child, Bolyai was pushed by his father to be the best he could be and to live up to his great father’s mathematical name \cite{britannicajanos}. From his early years, Farkas tutored him in mathematics and by the age of four, it was clear that Bolyai was an extremely bright and observant child \cite{britannicajanos}. 
+
+Bolyai attended school to study all the normal subjects bar mathematics; this was taught to him by his father and by the age of 13 he had mastered calculus \cite{standrewsjanos}. Although his father had a lecturing post, he was not paid well enough to supply all his son’s wishes \cite{standrewsjanos}. As he approached the end of college, Farkas struggled to find him a place to receive a good mathematical education \cite{standrewsjanos}. Neither of the universities of Pest or Vienna offered decent quality mathematical education at the time and his father could not afford to send his son abroad to study \cite{standrewsjanos}. It was at this moment that Farkas wrote to this friend Gauss requesting him to take on János and let him live with him in order to receive the best possible mathematical education \cite{standrewsjanos}. It is interesting to ponder on what benefits may have come to the modern-day mathematical world if Gauss had taken him up on this offer, but Gauss refused, and Bolyai would go on to study military engineering at the Academy of Engineering at Vienna \cite{standrewsjanos}. 
+
+Around 1820, Bolyai started to follow in the footsteps of his father and the pursuit of pure mathematics \cite{standrewsbolyai}. While studying in Vienna, he attempted to replace Euclid’s parallel axiom with another axiom which could be deduced from the others \cite{standrewsbolyai}. Through correspondences with his father, he was discouraged in taking the same route, with his father saying “parallels […] extinguished all light and joy in my life” \cite{standrewsjanos}. Nevertheless, he continued to pursue this branch of non-Euclidean geometry and after four years of study he concluded that the axiom was in fact independent of all other axioms of geometry \cite{standrewsbolyai}. 
+
+However, his father’s enthusiasm did not reflect his own, and he was discouraged from continuing his writing until a six years later, when his father realised the full significance of what his son had accomplished and then encouraged him to write up the work for publication as an Appendix to the Tentamen \cite{standrewsbolyai}. In these writings, Bolyai set up his own definitions of parallel and stated clearly the different systems we now call Euclidean, hyperbolic, and absolute \cite{standrewsbolyai}. After this publication Gauss had become interested in the young mathematician and they began to exchange correspondences about their work, which was incredibly similar \cite{standrewsbolyai}. This relationship continued until Bolyai realized that Gauss had anticipated most of his work and grew irritable as a result of this - it was a severe blow to him and following this Bolyai became irritable and a difficult person to work with \cite{standrewsbolyai}. 
+
+Later in his life, Bolyai moved back in with his father and continued to work on his study of geometry and undertook the task of developing all of mathematics based on axiom systems \cite{standrewsbolyai}. His work, both unpublished and published, was ahead of its time and contributed greatly to the notions of topological invariance \cite{standrewsbolyai}. He also developed rigorous concepts of complex numbers as ordered pairs of real numbers and worked with his father through sour relations to understand mathematics \cite{standrewsbolyai}. In his last few years of life Bolyai gave up on mathematical study and tried to construct a theory of all knowledge; these sections of his published works contain interesting ideas about linguistics and sociology \cite{standrewsbolyai}. 
+
+\subsection{Conclusion}
+Over the course of Gauss’ 77 years of life, Gauss was involved in the lives of many noteworthy mathematicians, whether it was directly or indirectly. Gauss and his many interests revolutionised each subject he decided to work in and proved his actions matched his words: mathematicians benefit from each other. By looking into Gauss’ life, we can both highlight how he contributed to the field beyond his own work and contextualise his discoveries. Examining his work through the lens of his life allows us to see how his interests developed and changed, showing how he arrived at each of his significant discoveries. From studying his life and relationships, we will move onto understanding and explaining his mathematical work. 
+
+
+\section{Final Results}
+
+\begin{center}
+    \textit{``"Life stands before me like an eternal spring with new and brilliant clothes"}
+    \newline {\small Carl Friedrich Gauss}.
+\end{center}
+
+Our group aimed to understand how Gauss’ theories worked and decided to learn in depth how to derive some of the mathematician’s results. By interacting with each other, we were able to acquire a thorough understanding of Gauss’ Least Squares Method and a range of his physics and mathematical results. We concentrated heavily on his physics results and his work in number theory. Despite a high-level of Mathematics being required to comprehend certain aspects of the topic, we were able to gain a significant expertise on the specified areas.
+
+In regards to the Least Squares Method, we will explain in depth the derivation, along with the uses and flaws of the method. We also felt it useful to incorporate a specially designed python code which uses Gaussian Elimination to solve simultaneous equations obtained through the Least Squares Method. 
+
+\subsection{Gauss' Physics results}
+With respect to physics, Gauss primarily focused on electromagnetism and gravity, and this section will be focused on his main three laws: his Flux theorem, his Law for Magnetism and his Law for Gravity. These were chosen as they are interlinked with each other. 
+
+\subsubsection{Gauss' Flux Theorem}
+The theorem was first proposed by Joseph-Louis Lagrange in 1773 and then by Gauss in 1813, and both of the theorems were in the context of the attraction of ellipsoids and spheres \cite{flux}. The law connects the distribution of electric charge to an electric field; it shows that regardless of charge distribution, the electric flux out of a closed surface is proportional to the electric charge enclosed by the surface \cite{flux}, where electric flux is the rate of flow of electric field through a given area. It is represented by the equation \[\phi E = \frac{Q}{\epsilon_0}\] where \(\phi E\) is the electric flux through a closed surface, \(Q\) is the total charge enclosed within the volume, and \(\epsilon_0\) is the electric constant, or vacuum permittivity. 
+
+His law can be derived by using Coulomb's Inverse Square Law, from 1785, which states the electric field due to a stationary point charge can be given by: \[E(r) = \frac{q e_r}{4\pi \epsilon_0 r^2}\] where \(e_r\) is the radial unit vector, which is a vector in the direction of the increasing radius, \(r\) is the radius and \(q\) is the charge of the particle, which we assume to be located at the origin \cite{flux}.
+
+Through Coulomb's law, we can get the total field at \(r\) by using integration to sum the field at \(r\) due to the infinitesimally small charge at each point \(s\) in space. This gives the expression: \[E(r) = \frac{1}{4\pi \epsilon_0}\int\frac{\rho(s)(r-s)}{|r-s|^3} d^3 s\] where \(\rho\) is the charge density. Taking the divergence of both sides with respect to the total field \(r\), where divergence measures how much the flow of the vector field is expanding at a point \cite{delta}, it can be deduced that \[\nabla \frac{r}{|r|^3}=4\pi\delta(r)\] where \(\delta(r)\) is the Dirac delta function, which is a generalised function that maps every function to its value at 0 \cite{delta}, with parameter \(r\). This then becomes \[\nabla E(r) =\frac{1}{\epsilon_0}\int \rho (s)\delta(r-s)d^3s\] and since the "sifting property" of the delta function means that the graph is 0 everywhere apart from at \(r = r_0\) \cite{delta}, as shown by Figure \ref{delta}, this means that we arrive at \[\nabla E(r) = \frac{\rho (r)}{\epsilon_0}\] which is Gauss' flux law in differential form.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Images/Delta graph.jpg}
+  \caption{Geometric construction of delta function}
+  \label{delta}
+\end{figure} 
+
+\subsubsection{Gauss' Law for Magnetism}
+This law states that magnetic monopoles do not exist, which in turn implies magnetic field lines must be continuous and that charges must be moving to produce magnetic fields \cite{electrodynamics}. It can also be used to calculate the net charge for any given volume and the magnetic field of the current element being investigated \cite{electrodynamics}. It also shows that the line integral of a magnetic field around any closed loop vanishes, i.e. the number of field lines entering a closed region is equal to the number of field lines exiting a region and therefore the magnetic flux is 0 \cite{electrodynamics}. The net flux of a magnetic field can be defined as \begin{align*}
+  \oiint_{S}B\times dA &= 0
+\end{align*}
+where \(S\) is any compact surface with no edges, \(B\) is the magnetic field and \(dA\) is a vector whose magnitude is an area of infinitesimal size in comparison to surface S. 
+
+The law is important to preserve, especially for areas such as magneto-hydrodynamics, which is the study of magnetic properties in electrical conducting fluids, because a violation of the law even on a small scale could impose strong non-physical forces, which would break the law of conservation of energy \cite{conservation}. 
+
+\subsubsection{Gauss' Law for Gravity}
+Gauss' theorem says that gravitational flux across any closed surface is proportional to the contained mass \cite{gravity}. Gauss’ law states 
+\begin{align*}
+    \oiint_{S}g\times dA &= -4\pi GM
+\end{align*}
+where \(g\) is the gravitational field, \(G\) is the universal gravitational constant and \(M\) is the mass enclosed in the surface. 
+
+This law is comparable to Newton's Law of Universal Gravitation, which specifies how every particle attracts every other particle with a force inversely proportional to the square of the distance between them and directly proportional to the product of their masses \cite{gravity}. The law can be derived from Gauss' one, by taking the scenario where the volume \(V\) is a sphere of radius \(r\) with a mass \(M\), and it can be assumed that the gravitational field of a point mass to be symmetric. Because of this, \(g\) can take the form \[g(r)= g(r)e_r\] which states that \(g\)'s magnitude is not dependent on the direction of \(r\). Substituting this in
+\begin{align*}
+    g(r)\oint_{V}e_r\times dA &= -4\pi GM
+\end{align*}
+and using the fact that the volume is a spherical surface with constant radius and area \(4\pi r^2\), we get \[g(r)(4\pi r^2)=-4\pi GM\] This then simplifies to \[g(r) = -GM \frac{e_r}{r^2}\] where \(M\) is the mass of the particle, which is assumed to be evenly distributed throughout the point mass. Gauss’ law is often used to derive the gravitational field in certain situations where using Newton’s law would more complicated \cite{gravity}.
+
+\subsection{Gauss' Mathematical results}
+
+\subsubsection{Eureka Theorem}
+
+Gauss' Eureka theorem states that every positive integer can be written as the sum of 3 triangular numbers (in this context 0 is a triangular number), sometimes stated as at most three triangular numbers \cite{polygonalnumbers}. The Eureka Theorem falls under Fermat's polygonal number theorem, which states that “every positive integer can be written as the sum of up to $n$ $n$gonal numbers" \cite{DisAr}. When Gauss proved this true for $n=3$, Lagrange had already proven it for $n=4$. The full proof was found by Cauchy in 1813. Gauss' proof was published in his book, \textit{Disquisitiones Arithmeticae} (proof number 293) \cite{DisAr}. Gauss' proof for Eureka theorem uses the theory that every positive integer in the form $8n+3$, where $n$ is some positive integer, can be written as 3 square numbers. Gauss' lemma for Eureka theorem is that a positive integer $n$ be written as the sum of 3 triangular numbers if and only if $8n+3$ can be written as the sum of 3 square numbers \cite{DisAr}, written as:
+\begin{equation}
+    n = \frac{a(a+1)}{2} + \frac{b(b+1)}{2} + \frac{c(c+1)}{2} \Leftrightarrow 8n+3 = x^2 + y^2 + z^2
+\end{equation}
+Where $n, a, b, c, x, y, z \in \mathbb{Z}$ and $ n,a,b,c,x,y,z \ge 0$. \newline
+If $n$ can be written as 3 triangular numbers then:
+\begin{equation}
+    n = \frac{a(a+1)}{2} + \frac{b(b+1)}{2} + \frac{c(c+1)}{2}
+\end{equation}
+Due to the fact that every triangular number can be written as \[\frac{a(a+1)}{2}\] where $a$ is some integer. We can show that if $n$ can be written as 3 triangular numbers then $8n+3$ can be written as the sum of 3 square numbers:
+\begin{align*}
+    n &=  \frac{a(a+1)}{2} + \frac{b(b+1)}{2} + \frac{c(c+1)}{2} \\
+    8n &= 4a(a+1) + 4b(b+1) + 4c(c+1)
+    \\
+    8n+3 &= 4a^2 + 4a + 4b^2 + 4b + 4c^2 + 4c + 3
+    \\
+    8n+3 &= (4a^2 + 4a + 1) + (4b^2 + 4b + 1) + (4c^2 + 4c + 1)
+    \\
+    8n+3 &= (2a+1)^2 + (2b+1)^2 + (2c+1)^2
+\end{align*}
+We can then show that if $8n+3$ is the sum of three square numbers then $n$ is the sum of three triangular numbers, expressing $8n+3$ first as the sum of three square numbers as below:
+\begin{equation}
+    8n+3 = x^2 + y^2 + z^2
+\end{equation}
+This means that:
+\[x^2 + y^2 +z^2 = 3 \pmod{8}\]
+And since if $x^2=a \pmod{8}$ where $x$ is some integer then $a$ must equal 0, 1 or 4, all of the squares must be odd and so can all be written as \cite{polygonalnumbers}:
+\[(2a+1)^2\]
+Where $a$ is some integer, and so the equation (3) can be written as:
+\[8n+3 = (2a+1)^2 + (2b+1)^2 + (2c+1)^2\]
+From this point, the equation (2) can be arrived at through the earlier algebraic steps in reverse. This proves that if a positive integer in the form of $8n+3$ can be expressed as the sum of three square numbers, then $n$ can be expressed as the sum of three triangular numbers. Combined with the earlier half of the proof, this proves the lemma (1) stated as a positive integer $n$ be written as the sum of 3 triangular numbers if and only if $8n+3$ can be written as the sum of 3 square numbers. Legendre later proved in his Sum of Three Squares Theorem that every positive integer in the form $8n+3$ can be written as 3 square numbers. This proves that every positive integer can be written as the sum of 3 triangular numbers \cite{DisAr}.
+
+\subsubsection{Law of Quadratic Reciprocity}
+Notably one of Gauss' favourite and most recognised works was his efforts into the Law of Quadratic Reciprocity. Originally proposed by Adrien-Marie Legendre and Leonhard Euler while pondering over Fermat's two square theorem, the Law was first proved by Gaus in 1796, and throughout his lifetime he found five other proofs \cite{lawqr}. Gauss grew a love for this theorem and described it as the fundamental theorem of higher arithmetic, and the golden theorem. Today there are 246 published proofs for the Law of Quadratic Reciprocity, the most for any mathematical theorem bar Pythagoras'. Other notable mathematicians with contributions and proofs of this theorem include Gotthold Eisenstein, Ernst Kummer and Joseph Liouville. The Law of Quadratic Reciprocity was used in the development of higher arithmetic to prove the existence of primes in certain arithmetic progressions and that certain primes can be expressed in terms of some quadratic forms. The notation that is used to describe the Law of Quadratic Reciprocity as notated by Legendre and Euler is known as Legendre's symbol \cite{lawqr}
+\\
+Let $p$ be an odd prime and let $n \in \Z$. The \textbf{Legendre symbol} \(\bigg( \dfrac{n}{p} \bigg)\) is defined as
+\[\left(\frac{n}{p}\right) = \left\{ \begin{array}{rl} 1 & \mbox{if } n \mbox{ is a quadratic residue mod } p\\
+-1 & \mbox{if } n \mbox{ is a quadratic nonresidue mod } p \\
+0 & \mbox{if } p|n.
+  \end{array} \right.  \]
+\\
+Written differently, let $n$ and $p$ be distinct odd prime numbers, the Legendre symbol $\bigg( \dfrac{n}{p}\bigg)$ will be 1 if $q^2 \equiv n \pmod{p}$ for some integer \(q\), otherwise $\bigg( \dfrac{n}{p}\bigg)$ is \(-1\).
+\\
+Using a worked example to demonstrate the basics of quadratic reciprocity where $p=7$ and $q=11$, noting that $p$ and $q$ are odd distinct primes.
+Solving $\bigg( \dfrac{p}{q}\bigg)$ means discerning if an integer $x$ exists where $x^2=p \pmod{q}$, and so in this worked example if an integer $x$ exists where $x^2 = 7 \pmod{11}$. Given the information shown in table \ref{tablelqr}, there is not a possible integer $x$ meaning that $\bigg( \dfrac{p}{q}\bigg) = -1$.
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ $x$ & $x^2$ & $x^2 \pmod{11}$ \\
+ \hline
+ 0 & 0 & 0 \\
+ 1 & 1 & 1 \\
+ 2 & 4 & 4 \\
+ 3 & 9 & 9 \\
+ 4 & 16 & 5 \\
+ 5 & 25 & 3 \\
+ 6 & 36 & 3 \\
+ 7 & 49 & 5 \\
+ 8 & 64 & 9 \\
+ 9 & 81 & 4 \\
+ 10 & 100 & 1 \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Table showing squares $\pmod{11}$}
+\label{tablelqr}
+\end{table}
+
+In a similar way the value of $\bigg( \dfrac{q}{p}\bigg)$ can be calculated by determining whether there exists an integer $x$ where $x^2 = 11 \pmod{7}$ and therefore $x^2 = 4 \pmod{7}$ where $x$ can exist, the simplest example being $x=2$.
+\\
+Some relationships between quadratic reciprocities are simple and intuitive, following a working understanding of modulo arithmetic. These are shown below:
+\[\bigg( \dfrac{ab}{p} \bigg) = \bigg( \dfrac{a}{p} \bigg) \bigg( \dfrac{b}{p} \bigg)\] \\
+\[\bigg( \dfrac{q}{p} \bigg) = \bigg( \dfrac{p-q}{p} \bigg)\] \cite{lawqr}\\
+The Law of Quadratic Reciprocity is another formula which describes a relationship between quadratic reciprocities and it can now been seen as a way of deducing the relationship between two odd prime numbers in terms of a quadratic $n$ that relates to both of the numbers and reducing the expressions to simpler and smaller numbers. The law of quadratic reciprocity is written as: 
+\begin{equation}
+\label{lqr}
+\left(\frac{p}{q}\right) \left(\frac{q}{p} \right) = (-1)^{\bigg(\displaystyle \frac{p-1}{2}\cdot\frac{q-1}{2}\bigg)}
+\end{equation}
+\\
+However it should be noted that there are 2 further supplicant  identities\cite{lawqr}:
+\begin{equation}
+\label{firststated}
+    \bigg( \dfrac{-1}{p} \bigg) = (-1)^{\bigg(\displaystyle \frac{p-1}{2}\bigg)}
+\end{equation}
+\\
+\begin{equation}
+\label{secondstated}
+    \bigg( \dfrac{2}{p} \bigg) = (-1)^{\bigg(\displaystyle \frac{p^2-1}{8}\bigg)} 
+\end{equation}
+
+
+To show the use of quadratic reciprocity and how Legendre's symbol can be used to compute and to simplify, a worked example can be seen below, attempting to compute \(\bigg( \dfrac{-1234}{4567} \bigg)\) using quadratic reciprocity by simplifying the expression until it is easily calculated.
+\\
+\[\bigg( \dfrac{-1234}{4567} \bigg) = \bigg( \dfrac{-2 \cdot 617}{4567} \bigg) = \bigg( \dfrac{-1}{4567} \bigg)\bigg( \dfrac{2}{4567} \bigg) \bigg( \dfrac{617}{4567} \bigg)\] \\
+The above line can be simplified using the simple rules of quadratic reciprocity. Then it can be further simplified by using the supplicant identities and the Law of Quadratic Reciprocity as shown below (using the first (\ref{firststated}) and then the second (\ref{secondstated}) of the supplicant identities stated and then the Law of quadratic reciprocity (\ref{lqr})):
+\[\bigg( \dfrac{-1}{4567} \bigg) = (-1)^{\bigg(\displaystyle\frac{4567-1}{2}\bigg)} = -1 \] (Using \ref{firststated}) \\
+\[\bigg( \dfrac{2}{4567} \bigg) = (-1)^{\bigg(\displaystyle \frac{4567^2 -1}{8}\bigg)} = 1\] (Using \ref{secondstated}) \\
+\[\bigg( \dfrac{617}{4567} \bigg) = (-1)^{\bigg(\displaystyle \frac{617-1}{2}\cdot\frac{4567-1}{2}\bigg)} \cdot \bigg( \dfrac{4567}{617} \bigg) = (1) \cdot \bigg( \dfrac{4567}{617} \bigg) \] (Using \ref{lqr})\\
+Continuing on from the earlier expression giving:
+\[=(-1)\cdot(1)\cdot(1) \bigg( \dfrac{4567}{617} \bigg) = -\bigg( \dfrac{248}{617} \bigg) = \bigg( \dfrac{8 \cdot 31}{617} \bigg) = \bigg( \dfrac{2 \cdot 2 \cdot 2 \cdot 31}{617} \bigg) \]  \\
+Since $\bigg( \dfrac{q}{p}\bigg) = 1$ or $-1$ when squared it will always equal $1$. Allowing the above expression to be further simplified as below:
+\[ = - \bigg( \dfrac{2}{617} \bigg)\bigg( \dfrac{31}{617} \bigg) \]
+This can be simplified using the Law of Quadratic reciprocity (\ref{lqr}) and the second stated of the supplicant laws (\ref{secondstated}) to the expression below:
+\[ = - \bigg( \dfrac{617}{31} \bigg) = - \bigg( \dfrac{28}{31} \bigg) = - \bigg( \dfrac{4 \cdot 7}{31} \bigg) \]
+Then using the Law of Quadratic reciprocity (\ref{lqr}) twice and the ease of squares in $ \pmod{4}$ (though these steps are not written out below) the expression can be simplified to:
+\[= \bigg( \dfrac{31}{7} \bigg) = \bigg( \dfrac{3}{7} \bigg) \]
+Using the law of quadratic reciprocity (\ref{lqr}) again gives:
+\[ = (-1)^{\bigg(\displaystyle \frac{3-1}{2}\cdot\frac{7-1}{2}\bigg)} \cdot \bigg( \dfrac{7}{3} \bigg) = - \bigg( \dfrac{7}{3} \bigg) = - \bigg( \dfrac{1}{3} \bigg) = -1 \]
+Since it is easy to evaluate that $\bigg( \dfrac{1}{3} \bigg) = 1$ (an example for the square being $2^2$, the original expression can be evaluated as being equivalent to $-1$.
+Therefore through the simplification of the Legendre's symbol above, we have shown that -1234 is a quadratic non-residue of 4567 as the expression above has simplified to -1, which without use of the Law of Quadratic Reciprocity would have been a long and inefficient task due to the large nature of the numbers.
+
+\subsubsection{The Fundamental Theorem of Algebra}
+
+The fundamental theorem of algebra states that any non-constant (i.e. it has a degree of at least one) polynomial with complex coefficients has at least one root in the complex plane. Attempts at proving this began with Jean le Rond d'Alembert in 1746, however Gauss himself gave the first satisfactory proof in 1799 \cite{fundamentaltheorem}, and was awarded his doctoral degree for it \cite{menofmaths}. However, this has been disputed by John Stillwell in 2004, who says that both mathematicians had flaws in their proof, d'Alembert's being easier to fix, while Gauss' proof still has no easy way to fix \cite{fundamentaltheorem}. Over the course of his life, Gauss gave four distinct proofs, including one when he was aged 70 \cite{menofmaths}.
+
+Gauss' first proof was only proven for real coefficients, however it is easily adapted for complex coefficients, as will be shown \cite{fundamentaltheorem}. Let us assume that the theorem holds for real coefficients, and a general polynomial with complex coefficients is written as:
+\[f(z) = c_{N}z^{N} + c_{N-1}z^{N-1} + \cdots + c_0\]
+We can then define a new polynomial where all the coefficients are the complex coefficients of \(f(z)\):
+\[\overline{f}(z) = \overline{c_{N}}z^{N} + \overline{c_{N-1}}z^{N-1} + \cdots + \overline{c_0}\]
+\(\overline{f}(z)\) is the same polynomial as \(\overline{f({\overline{z}})}\).
+%need to ask a teacher to explain this all properly
+This means that we can create a new polynomial:
+\[g(z) = f(z)\overline{f}(z) = f(z)\overline{f({\overline{z}})}\]
+From here, we know that \(g(z)\) is a non-constant polynomial with real coefficients, and thus, by assumption, must have a root, \(z_0\). Therefore:
+\[g(z_0) = f(z_0)\overline{f({\overline{z_0}})} = 0\] 
+From this, either \(z_0\) or \(\overline{z_0}\) is a root of \(f\). These steps are shown as a more detailed proof in Appendix A.
+
+Gauss' first proof revolved around plotting Re\((f(z)) = 0\) and Im\((f(z)) = 0\), and proved that they must always meet (and thus have a root) \cite{fundamentaltheorem}. He did this by showing that, for sufficiently large \(r\), each curve intersects the circle of \(|z| = r\) at \(2N\) points (where \(N\) is the degree of the polynomial), and the intersection points of each curve are interleaved \cite{fundamentaltheorem}. Without proof, Gauss assumed that if a part of the curve enters the disk bound by \(|z| = r\), it must also leave; this assumption was not actually proven until 1920 \cite{fundamentaltheorem}. This means that, following one curve entering the circle, it must cross the other curve before it leaves the circle again \cite{fundamentaltheorem}.
+
+As an example, Figure \ref{simplefundamental} shows an example of this with a certain function, \(f(z) = z^3 + 7z^2 +11z - 17\). The red lines are the points where Re\((f(z)) = 0\) and the blue lines are Im\((f(z)) = 0\). The dotted black circle shows \(|z| = r\), where \(r = 25\) in this case. Note that the real and imaginary functions do indeed alternate going around the circle. The three points shown in green are the roots of \(f(z)\), which occur when the real and imaginary parts intersect.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Images/fundamentalsimple.png}
+  \caption{Simple example of Gauss' proof of the Fundamental Theorem of Algebra}
+  \label{simplefundamental}
+\end{figure}
+
+For a more complicated example, Figure \ref{complicatedfundamental} \cite{fundamentaltheorem} shows an example of this with a different function, \(f(z) = z^8 + 0.2z^7 - 0.1z^6 - 0.3z^5 - 0.1z^3 + 0.2z^2 - 0.3z + 0.1\). Similar to before, the solid red lines are the points where Re\((f(z)) = 0\) and the dashed blue lines are Im\((f(z)) = 0\). The small, solid black circle shows \(|z| = r_0\) while the larger, dotted circle shows \(|z| = r\)* (which is used in supplementary proofs to prove assumptions in Gauss' proof).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Images/fundamentalcomplex.png}
+  \caption{More complicated example of Gauss' proof of the Fundamental Theorem of Algebra}
+  \label{complicatedfundamental}
+\end{figure}
+
+In addition, Gauss was one of the first mathematicians to give a sensible explanation of complex numbers, including establishing notation, and how they can be displayed on what is now called an Argand diagram \cite{menofmaths}. From this, he also defined a new class of numbers as Gaussian integers: numbers in the form \(a + bi\) where \(a\) and \(b\) are both integers \cite{gaussianintegers}. Through the use of new functions such as the norm (N\((a + bi) = a^2 + b^2\)), a new branch of number theory was created with its own unique divisibility laws, and can be used to find integers which are the sum of two squares in more than way (e.g. \(65 = 4^2 + 7^2 = 8^2 + 1^2\) or \(1105 = 9^2 + 32^2 = 12^2 + 31^2 = 4^2 + 33^2\)) \cite{gaussianintegers}.
+
+\subsubsection{Prime Number Conjecture}
+The Prime Number Conjecture refers to the frequency of primes in numbers. $ \pi (N)$ is the number of primes up to and including $N$\cite{musicofprimes}. By looking at the pattern of these numbers as opposed to the minute detailing of which numbers are or are not primes (as shown in Table \ref{table:1}), Gauss was able to see a pattern between the number of primes and produce a ballpark formula of predicting what $ \pi (N)$ was\cite{musicofprimes}. 
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |m{13em}|m{13em}|m{14em}| } 
+ \hline
+ N & $ \pi (N)$ & On average, how many numbers you need to count before you reach a prime number ($ \frac{N}{ \pi (N)}$) \\
+ \hline
+ 10 & 4 & 2.5 \\
+ 100 & 25 & 4.0 \\
+ 1,000 & 168 & 6.0 \\
+ 10,000 & 1,229 & 8.1 \\
+ 100,000 & 9,592 & 10.4 \\
+ 1,000,000 & 78,498 & 12.7 \\
+ 10,000,000 & 664,579 & 15.0 \\
+ 100,000,000 & 5,761,455 & 17.4 \\
+ 1,000,000,000 & 50,847,534 & 19.7 \\
+ 10,000,000,000 & 455,052,511 & 22.0 \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Table showing patterns of frequency and magnitude of primes}
+\label{table:1}
+\end{table}
+
+Gauss noticed that for $N > 10000$ the third column in Table \ref{table:1} increases by 2.3 each time. Meaning every time he multiplied N by 10, $ \frac{N}{ \pi (N)}$ increased by 2.3. This link between multiplication and addition reminded Gauss of logarithms and with $\ln{10}=2.3$ increasing the pattern. This led him to the conjecture that for the numbers 1 to N, roughly 1 in $ \ln{N}$ were prime, estimating that roughly $ \pi (N) = \frac{N}{\ln{N}}$\cite{musicofprimes}.
+Legendre also worked on the prime number conjecture, arguing that many discoveries attributed to Gauss in the topic were his\cite{musicofprimes}. While Gauss took a break from the conjecture, Legendre improved his estimate for $\pi (N)$ to $\frac{N}{\ln{N} - 1.08366}$.
+
+After leaving a returning to the problem, Gauss started to instead think about it from the point of view of probability. If roughly 1 in $\ln{N}$ of the numbers from 1 to N are prime then the probability than N is prime is $\frac{1}{\ln{N}}$\cite{musicofprimes}. Clearly N either is prime or isn't, however by thinking from this point of view and adding probabilities, Gauss was able to conjecture that:
+\begin{equation}
+    \pi (N) = \frac{1}{\ln{2}} + \frac{1}{\ln{3}} + \frac{1}{\ln{4}} + ... + \frac{1}{\ln{N}}
+\end{equation}
+Gauss called this function the logarithmic integral written as Li(N)\cite{musicofprimes}, however Gauss never proved his conjecture; it was proven around a century later and is now the prime number theorem. Below, Figure \ref{plotofpi} shows Gauss' first formula to estimate $\pi(N)$ and Li(N) with the actual values of $\pi (N)$to illustrate their respective accuracy as N increases.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{Images/Picture1.png}
+  \caption{Plot of $\pi(N)$, $Li(N)$ and $\frac{N}{Ln(N)}$ for N up to 10000}
+  \label{plotofpi}
+\end{figure}
+\subsection{Least Squares Method}
+
+The Least Squares Method is a statistical technique used to find the line that best fits a set of data, to allow the `most probable' value of an unknown data point to be calculated. It is difficult to overstate the value of the method to modern statistics, as, in the words of Stephen Stigler, it ``carr[ies] the bulk of statistical analyses, and [the method is] known and valued by nearly all [statisticians]" \cite{stigler}. The history of the method is mostly detailed in the sections about Gauss' life, and Gauss' relationship with Legendre, because both mathematicians claimed to have discovered it first.
+
+The Gaussian Distribution played a role in the discovery of the Least Squares Method. It is also known as the normal distribution, or more informally, a bell curve. The distribution is one of the most well-known statistical distributions, and many natural phenomena, such as height and test scores, will follow it. Gauss worked on this distribution after starting from the law of distribution of errors, and derived his Least Squares Method from this distribution. Like many areas of Gauss' work, there are questions of priority and credit; the distribution is also known as the Laplace-Gaussian distribution, because Pierre-Simon Laplace predated Gauss by around 40 years, though started from more complex axioms \cite{distribution}. In addition, Francis Galton, Francis Ysidro Edgeworth and Auguste Bravais worked on the distribution at similar times, though receive less credit than Gauss and Laplace \cite{distribution}.
+
+\subsubsection{Mathematics}
+The Least Squares Method finds the line of best fit for a set of data by minimising the sum of the square of the deviations. In a trial and error method this would be taking each possible equation for the line of best fit, and summing the square of the difference between each actual value of $y$ and the expected value of $y$ (the $y$ value on the line which has the same $x$ co-ordinate), continuing for every equation to find the one where the sum is the lowest. This can be generalised as:
+\begin{equation} \label{generalformula}
+    \sum_{i=1}^ n (y_i - (f(x))^2
+\end{equation}
+However, this can be done more accurately and efficiently by using a generalised equation to a specific polynomial degree and then using optimisation to find the values of the coefficients where the sum is lowest. To do this the first important task is to determine to what degree of polynomial to calculate the line of best fit to. While it may instinctively seem that the higher the degree the better, this is incorrect. With any data, if you have a high enough polynomial there will be a line which fits through every data point, however this will rarely be useful. The most useful degree will depend on the context, the data and the size of the data set. \\
+Using the example of a quadratic to display the rest of the technique, we replace $f(x)$ with the generalised equation to the polynomial degree of 2 ($ax^2 + bx + c$) in (\ref{generalformula}) and simplifying as below:
+\begin{align*}
+    \sum& (y_i - (ax_i^2 + bx_i + c))^2 \\
+    \sum& (y_i - ax_i^2 - bx_i - c)^2 \\
+    \sum& y_i^2 + a^2x_i^4 + b^2x_i^2 + c^2 - 2y_iax_i^2 - 2y_i bx_i - 2y_i c +  2abx_i^3 + 2acx_i^2 + 2bcx_i \\
+    \sum& y_i^2 + \sum a^2x_i^4 +\sum b^2x_i^2 +\sum c^2 -\sum 2y_iax_i^2 -\sum 2y_i bx_i -\sum 2y_i c +\sum  2abx_i^3 +\sum 2acx_i^2 +\sum 2bcx_i \\
+    \sum& y_i^2 + a^2\sum x_i^4 +b^2\sum x_i^2 + nc^2 - 2a\sum y_ix_i^2 -2b\sum y_i x_i - 2c\sum y_i + 2ab\sum  x_i^3 + 2ac\sum x_i^2 + 2bc\sum x_i \\
+\end{align*}
+Since we are optimising (trying to find the values of $a,b,c$ where the sum is lowest), you use partial differentials. We partially differentiate ($\partial $) the expression with respect to each coefficient respectively in turn and set each expression to $0$, creating a system of simultaneous equations.
+\begin{align*}
+    2a \sum x_i^4 -2\sum y_ix_i^2 + 2b \sum x_i^3 + 2c \sum x_i^2 =& \; 0 \\
+    2b \sum x_i^2 - 2 \sum y_i x_i + 2a \sum  x_i^3 + 2c \sum x_i =& \; 0 \\
+    2cn - 2\sum y_i + 2a\sum x_i^2 + 2b \sum x_i =& \; 0
+\end{align*}
+This system of simultaneous equations is general for finding the line of best fit for any data set to the degree of 2 (note the equations in the above system can all be simplified further by dividing by 2). To complete the method, the data must be substituted in and the equations solved.
+To illustrate, here is a short worked example where a quadratic was chosen. The data used in the worked example is shown in table \ref{table:2}.
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ x & y  \\ 
+ 1 & 3  \\ 
+ 2 & 2  \\
+ 3 & 14 \\
+ 4 & 19 \\
+ 5 & 28 \\
+ 6 & 42 \\
+ 7 & 66 \\
+ 8 & 81 \\
+ 9 & 97 \\
+ 10 & 113 \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Table showing data used in worked example}
+\label{table:2}
+\end{table}
+
+Using the data we calculate the information needed, listed below:
+\begin{align*}
+    n &= 10 \\
+    \sum x_i &= 55 \\
+    \sum x_i^2 &= 385 \\
+    \sum x_i^3 &= 3025 \\
+    \sum x_i^4 &= 25333 \\
+    \sum y_i &= 465 \\
+    \sum y_i x_i &= 3630 \\
+    \sum y_ix_i^2 &= 30228 \\ 
+\end{align*}
+Substituting those values into the earlier system of equations (and simplifying them by dividing by 2). Giving the simultaneous equations:
+\begin{align*}
+    25333a - 30228 + 3025b + 385c &= 0 \\
+    385b - 3630 + 3025a + 55c &= 0 \\
+    10c - 465 +385a + 55b &= 0 \\
+\end{align*}
+Solving these equations gives $a=1; b=2; c=-3$ and so the equation $y=x^2+2x-3$. The data and the line are plotted below in Figure \ref{workedgraph}. In this way we can use the Least Squares Method to find the line of best fit (to the polynomial degree of 2) of a data set. This method can be used in the same way for different degrees (for an example a degree of 3 would use $f(x) = ax^3 + bx^2 + cx + d$ and then would be simplified and solved in the same way).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Images/desmos-graph.png}  \caption{Plot of data from worked example with calculated line of best fit $y=x^2+2x-3$}
+  \label{workedgraph}
+\end{figure}
+\subsubsection{Gaussian elimination}
+
+When simultaneous equations have been obtained when calculating the line of best fit, these need to be solved and there are multiple ways of doing this. When dealing with lower degree polynomials, and thus fewer unknowns, it may be trivial to solve these (always linear) simultaneous equations, such as through elimination or substitution. However, for higher degree polynomials, and to make the process more easy to automate, different methods need to be employed.
+
+Many methods to solve simultaneous equations use augmented matrices, as they are a way to standardise the equations and keep them contained in one object. An example for a three degree polynomial (so it has four unknowns) will be shown below, with the simultaneous equations and then the augmented matrix.
+\begin{align*}
+    -2a - b + 10c - 3d &= 103 \\
+    -4a - 8b -4c + 7d &= 10 \\
+    9a + 7b + 8c + 3d &= 81 \\
+    a - 6b + 4c - 9d &= 72
+\end{align*}
+\[
+\begin{bmatrix}
+    \begin{tabular}{cccc|c}
+    -2 & -1 & 10 & -3 & 103\\
+    -4 & -8 & -4 & 7 & 10\\
+    9 & 7 & 8 & 3 & 81\\
+    1 & -6 & 4 & -9 & 72
+    \end{tabular}
+\end{bmatrix}\]
+
+From here, there are multiple ways to solve for the unknowns, including finding the inverse of the matrix, however, as more unknowns are added, this becomes more difficult. Another method, which will be used here, involves repeated steps to get the matrix into a form much easier to work with. This method is called Gaussian elimination and is used widely across the computational sciences \cite{eliminationhistory}. Although Gauss did contribute to the method, he was by no means the originator, with examples of the method in use over 2000 years ago in China, and many adaptions happening in the 200 years since Gauss.
+
+The way Gaussian elimination works is through two steps known as forward elimination of unknowns, and back substitution \cite{eliminationmethod}. Forward elimination of unknowns aims to get the matrix in a form such that the bottom row only has one unknown, which is the last unknown (e.g. \(d\) for this case), the second last row only has two unknowns, and so on, and all other values should be zero, with the total adjusted accordingly \cite{eliminationmethod}. Therefore, the aim for this example is a matrix in the form:
+\[
+\begin{bmatrix}
+    \begin{tabular}{cccc|c}
+    $a_1$ & $b_1$ & $c_1$ & $d_1$ & $t_1$\\
+    0 & $b_2$ & $c_2$ & $d_2$ & $t_2$\\
+    0 & 0 & $c_3$ & $d_3$ & $t_3$\\
+    0 & 0 & 0 & $d_4$ & $t_4$
+    \end{tabular}
+\end{bmatrix}\]
+
+To get it into this form, each row can be multiplied by a constant and then the sum or difference between that row and the `pivot' row (e.g. the second row when trying to get rid of the second unknown) can be calculated \cite{eliminationmethod}. The method for this example matrix would be as such:
+\begin{itemize}
+    \item To get rid of the unknown of \(a\) in the second row, multiply the second row by 0.5 and then subtract it from row 1 to get the new second row.
+    \item To get rid of the unknown of \(a\) in the third row, multiply the row by \(\frac{2}{9}\) and add it to row 1 to get the new third row.
+    \item To get rid of the unknown of \(a\) in the fourth row, multiply it by 2 and add it to row 1 to get the new fourth row.
+\end{itemize}
+\[\begin{bmatrix}
+    \begin{tabular}{cccc|c}
+    -2 & -1 & 10 & -3 & 103\\
+    0 & 3 & 12 & -6.5 & 98\\
+    0 & \(\frac{5}{9}\) & \(\frac{106}{9}\) & \(-\frac{7}{3}\) & 121\\
+    0 & -13 & 18 & -21 & 247
+    \end{tabular}
+\end{bmatrix}\]
+\begin{itemize}
+    \item To get rid of the unknown of \(b\) in the third row, multiply by it \(\frac{27}{5}\) and subtract it from row 2 to get the new third row.
+    \item To get rid of the unknown of \(b\) in the fourth row, multiply by it \(\frac{3}{13}\) and add it to row 2 to get the new fourth row.
+\end{itemize}
+\[\begin{bmatrix}
+    \begin{tabular}{cccc|c}
+    -2 & -1 & 10 & -3 & 103\\
+    0 & 3 & 12 & -6.5 & 98\\
+    0 & 0 & -51.6 & 6.1 & -555.4\\
+    0 & 0 & \(\frac{210}{13}\) & -\(\frac{295}{26}\) & 155
+    \end{tabular}
+\end{bmatrix}\]
+\begin{itemize}
+    \item To get rid of the unknown of \(c\) in the fourth row, multiply by it \(\frac{559}{175}\) and add it to row 3 to get the new fourth row.
+\end{itemize}
+\[\begin{bmatrix}
+    \begin{tabular}{cccc|c}
+    -2 & -1 & 10 & -3 & 103\\
+    0 & 3 & 12 & -6.5 & 98\\
+    0 & 0 & -51.6 & 6.1 & -555.4\\
+    0 & 0 & 0 & -\(\frac{211}{7}\) & -\(\frac{422}{7}\)
+    \end{tabular}
+\end{bmatrix}\]
+
+From here, the matrix is turned back into a set of simultaneous equations and back substitution will now occur \cite{eliminationmethod}. This is when you start at the bottom, and solve the equations, substituting the previously solved unknowns, until all are solved:
+
+\begin{align*}
+    -2a - b + 10c - 3d &= 103 \\
+    3b + 12c - 6.5d &= 98 \\
+    -51.6c + 6.1d &= -555.4 \\
+    -\frac{211}{7}d &= -\frac{422}{7} \\ \\
+    d &= 2 \\
+    -51.6c + 6.1(2) &= -555.4 \\
+    c &= 11 \\
+    3b + 12(11) - 6.5(2) &= 98 \\
+    b &= -7 \\
+    -2a - (-7) + 10(11) - 3(2) &= 103 \\
+    a &= 4
+\end{align*}
+
+Therefore, in this case, the correct polynomial would be \(4x^3 - 7x^2 + 11x + 2\). This method is very easy for a computer to follow because the steps require little `original' thought and only simple calculations. Although there are optimisations possible, such as switching the rows or the columns of the matrix to avoid redundant calculations, and for low degree polynomials, there may be many more steps than some more conventional methods (e.g. inverting a 2 by 2 matrix), this method is easily adaptable and each optimisation still requires computing power which may be wasted for most calculations, so the method used in the code below is just at its most basic.
+
+\subsubsection{Uses}
+The earlier renditions of the Least Squares method originally evolved from geodesy, when scientists and mathematicians sought answers to the difficulty of travelling the Earth's seas during the Age of Exploration \cite{sea}. The ability to accurately describe the behaviour of celestial bodies was essential for ships to cruise in broad seas, where sailors could no longer rely on land observations for navigation \cite{sea}.
+
+A famous demonstration of the method was when it was used to predict the future location of a newly discovered asteroid, Ceres. On 1st January 1801, an astronomer, Giuseppe Piazzi, discovered Ceres and tracked its path for 40 days before losing it in the sight of the sun \cite{sea}. Based on the data collected by Piazzi, Gauss was the only astronomer to predict the location of the asteroid successfully through the use of his method \cite{sea}. 
+
+In 1805, Legendre presented the method by analysing data of the earth surface and the shape of it \cite{sea}. It is worth noting this was before Gauss had published his own paper on the Least Squares method. The values that were calculated were recognised as accurate depictions and were consistently used by astronomers and geodesists at the time \cite{sea}.
+
+However, in more recent years, the method is used to predict the behaviour of dependent variables, most predominantly in finance, as the model can be used to optimise business processes \cite{application}. A particular example is in predictive analytics, where companies will forecast future opportunities and risk \cite{application}. 
+
+The method can also be used to analyse marketing effectiveness, for example the effect of pricing and promotions on sales of a product \cite{application}. Linear regression enables us to capture the isolated impacts of each of the marketing campaigns along with controlling the factors that could influence the sales \cite{application}. 
+
+\subsubsection{Issues and Flaws}
+While the Least Squares method is incredibly useful and effective, there can be flaws or errors. The Least Squares method in itself is rather limited as it can only be used in situations for an independent variable against a dependent variable \cite{flaws}. This causes problems as the regression method only reduces deviation and error in the y direction \cite{pitfall}. This means that if there is deviation or error in the measurement of the x axis the Least Squares method will not be able to give an accurate line of best fit \cite{pitfall}. To further explain, the Least Squares method will be effective with data sets where the independent variable is for an example years and can be measured without error, whereas it will not work with a data set of height against weight since both are measured with error, in which case a different method would be more applicable such as the Deming method \cite{pitfall}.
+
+The Least Squares method can not be used with data which has an `irregular pattern' or shape. Using Figure \ref{weird}, the Least Squares method gives the line shown in blue, however a single line summary may not be appropriate here and instead having two individual lines would be better.
+\begin{figure}[H]\label{weird}
+  \centering
+  \includegraphics[width=0.4\textwidth]{Images/wierd shape.png}
+  \caption{Graph with points where more than one line is appropriate}
+\end{figure}
+Another flaw that can be encountered in the Least Squares method is with outlying data \cite{pitfall}. Spurious data which has a large deviation can highly skew the line since the deviation values are squared. This can be shown in Figure \ref{outlier}, where you can see the drastic change in the equation of the line due to the outlier in (b), and the line is no longer representative of the majority of the points.
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{Images/without outlier.png}
+  \caption{The graph excluding an outlier}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{Images/with outlier.png}
+  \caption{The graph including an outlier}
+\end{subfigure}
+\caption{Two graphs with the same points and their calculated lines}
+\label{outlier}
+\end{figure}
+Extrapolation is a tool which can not be used when using equations formulated by the Least Squares method, as there can not be too many variables which can affect the results. For example, if we take the Covid-19 cases of the first 240 days, the Least Squares method gives us the line of best fit as shown by Figure \ref{covid} in black. The line generated by the Least Squares method does not match the actual trajectory of the cases (shown in blue).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{Images/covid cases lsm flaw.png}
+  \caption{Graph showing Covid-19 cases for the UK}
+  \label{covid}
+\end{figure}
+
+Most of the problems with the use of the Least Squares method comes from using it without enough training and understanding \cite{flaws}. Often issues arise with the degree of polynomial to which the line of best fit is calculated (as mentioned in 5.4.1) \cite{flaws}. If applied to the right type of data set and with anomalous/outlying data points removed, the Least Squares method will work accurately \cite{flaws}.  
+
+\subsubsection{Code}
+The code we created can find the line of best fit to a polynomial degree of the user's choice. The code has a function which puts the data into a matrix (of simultaneous equations) depending on the degree. The matrix is then given to a function which uses Gaussian elimination to solve the simultaneous equations and finding the unknowns for the equation of the line of best fit. 
+
+To develop the code, we originally used NumPy to solve the simultaneous equations, and then decided to use Gaussian elimination, since using NumPy meant that the code was barely our work. However in our first attempt to code Gaussian elimination, the algorithm could only work for 3 unknowns. In our final code we created a function for Gaussian elimination which could work for any number of unknowns. We decided that that most efficient way to code the least squares method was to expand and partially differentiate the expression by hand (as shown in 5.4.1) to get the general system of simultaneous equations for an equation to a specific polynomial degree (so doing 1 to 5 by hand). From there, it was easy to turn the data into the matrix for the respective degree within the code and so, in the final code, we coded in the matrices for 1 and 3 to 5, whilst in the drafts, we only coded the matrix for a quadratic line of best fit. In what we expected to be our final code, we coded the matrix for each degree 1 to 5 respectively in separate functions, however when doing so we noticed a pattern within the matrices allowing us to create a general function for any degree which created a more general and efficient code. The final change within development was adding data validation and exception handling to make the code more robust, and formatting to make it easier to read and more user friendly. 
+
+Below is the function which creates the matrix of simultaneous for a line of best fit (\texttt{leastsquaremethod}) and the function which uses Gaussian elimination to solve the matrix (\texttt{gaussianelim}). It should be noted that these functions do not call each other and this is only a section of the full program. The variable \texttt{data} is a dictionary in which the \texttt{x} values are the keys with the respective \texttt{y} being its value. The variable \texttt{degree} is the polynomial degree to which the line is being calculated. The variable \texttt{n} (the first parameter in the function \texttt{gaussianelim}) is the number of unknowns in the system of simultaneous equations (one greater than the polynomial degree). The variable \texttt{a} is the matrix which holds the system of simultaneous equations. It should finally be noted that within speech marks, spaces are represented as a thick underscore.
+
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}
+def leastsquarematrix(data, degree):
+    keys = list(data.keys())
+    val = list(data.values())
+    xpowers = []
+    matrix = []
+    for i in range(degree+1):
+        line = []
+        for j in range(degree+2):
+            line.append(0)
+        matrix.append(line)
+    for i in range(degree*2 +1):
+        value = 0
+        for m in range(len(keys)):
+            value = value + (keys[m]**i)
+        xpowers.append(value)
+    for i in range(degree+1):
+        for j in range(degree+1):
+            index = len(xpowers) - i - j - 1
+            matrix[i][j] = xpowers[index]
+    for i in range(degree+1):
+        ans = 0
+        for m in range(len(keys)):
+            ans = ans + ((keys[m]**(degree-i))*val[m])
+        matrix[i][degree+1] = ans
+    return matrix
+    
+
+def gaussianelim(n,a):
+    x = []
+    for i in range(n):
+        x.append(0)
+    for i in range(n):
+        if a[i][i] == 0.0:
+            print("Zero error detected, this error is most likely caused by"
+            "there not being enough points entered for the degree of x chosen.")
+            break
+        for j in range(i+1, n):
+            ratio = a[j][i]/a[i][i]
+            for k in range(n+1):
+                a[j][k] = a[j][k] - ratio * a[i][k]
+    x[n-1] = a[n-1][n]/a[n-1][n-1]
+    for i in range(n-2,-1,-1):
+        x[i] = a[i][n]
+        for j in range(i+1,n):
+            x[i] = x[i] - a[i][j]*x[j]
+        x[i] = x[i]/a[i][i]
+    print('\nThe equation of the line of best fit is: ')
+    print("y =", end=" ")
+    for i in range(n):
+        power = n - 1 - i
+        if power != 0:
+            print('%0.2fx^%d + ' %(x[i],power), end = '')
+        else:
+            print('%0.2f' %(x[i]))
+\end{lstlisting}
+The rest of the code can be found in Appendix B along with the sections of earlier drafts discussed earlier, to illustrate the development of the code. Below, in Figure \ref{codephoto}, is a screenshot of the code functioning (using the data example from 5.4.1).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{Images/Capture.PNG}
+  \caption{Screenshot of code}
+  \label{codephoto}
+\end{figure}
+
+\subsection{Conclusion}
+
+The final results section summarises a small selection of Gauss' results in the mathematical and physical sciences, providing some context behind the discoveries, and gives examples to ease understanding. This completes the brief by widening access to some of his discoveries through clear diagrams and explanations. It also provides depth about the mathematics behind Gauss' Least Squares method, its implications in a variety of fields, issues and flaws, as well as explaining code that was developed to employ the method, further completing the brief.
+
+These findings are significant as Gauss' discoveries are extremely varied and allowing more people to understand them could, for example, improve fluency in statistics from learning the issues of the Least Squares method, iterative problem solving by understanding the development of the Prime Number Conjecture, and overall interest in numerous fields of mathematics and physics. Overall, this section shows the value of collaboration between mathematicians, as none of the discoveries shown were solely completed by Gauss, either being built upon previous findings, expanded by other mathematicians, or both.
+
+
+
+
+\section{Conclusion}
+
+In conclusion, this paper successfully completes the aim of providing a comprehensive analysis of Gauss' life and his relationships with other mathematicians. This is done by firstly giving a brief overview of the significant events of his life, such as being funded by the Duke of Brunswick or becoming the director of the G\"{o}ttingen Observatory \cite{menofmaths}, and the timeline of discoveries Gauss made, including how his interests evolved from pure mathematics in his youth, to astronomy and then physics when he was older. His relationship with his colleague, Farkas Bolyai, who focused on geometry \cite{stigler}, is also explained, as well as his role as a mentor to Germain, particularly surrounding number theory \cite{germaincorrespondence}, and Eisenstein, concerning reciprocity \cite{schmitz}, followed by his rivalries with Legendre, detailing numerous priority and personal disputes, and János Bolyai, whom he refused to teach \cite{standrewsbolyai}.
+
+Some of Gauss' most important findings in numerous fields are derived and explained, such as Gauss' Flux Theorem, which results from Coulomb's Inverse Square Law \cite{flux}, the Prime Number Conjecture, which predicts the frequency of prime numbers up to a particular number, and the Fundamental Theorem of Algebra, including one of his proofs which involves the intersections of the real and imaginary parts of all functions with complex coefficients \cite{fundamentaltheorem}. 
+
+After that, the Least Squares Method is mathematically derived using the sum of the differences between the expected and real values, squared, partial derivatives to find the optimal solution, and matrices to solve the simultaneous equations which occur \cite{eliminationmethod}. Each step is complemented by an example to ease understanding, and diagrams where relevant. The uses, including the relevant historical context surrounding the orbit of Ceres \cite{sea}, and limitations, with real world examples \cite{flaws}, are evaluated, and our development of code to implement the method is explained.
+
+In addition, the paper makes meaningful connections between how the historical context of Gauss' life impacted his discoveries, such as priority disputes over the Least Squares method leading to Gauss' later papers explaining the method in more detail, and how his discoveries in physics only came after he gained knowledge and prestige in mathematics and astronomy. The historical parts of the paper also help the modern reader understand how Gauss was able to influence many fellow mathematicians and be successful in a wide variety of fields, despite both his young age for many discoveries, and his financial situation.
+
+This paper should have increased the understanding of Gauss' far-reaching influences on mathematics and physics, both of the authors and the reader, and provide accessible explanations of complicated mathematics which may otherwise be normally available only to students with more experience or knowledge. It should also have encouraged an interest in not only Gauss himself and his discoveries, but also the historical development of mathematical rigour and theorems.
+
+However, the paper is limited in that Gauss lived such a busy and successful life that an in-depth analysis of every part of his life would be almost impossible. Also, much of Gauss' mathematics is of a very high level and inaccessible to us, and even to many of the best mathematicians of the 19th century. This paper aims to overcome these limitations by carefully selecting certain mathematicians and discoveries to focus on and analyse those in depth, especially those discoveries which might require less to begin to understand.
+
+To take this project further, as well as increasing the quantity of discoveries and relationships, some of the mathematics behind individual discoveries could be explored further, such as the full proof behind the Fundamental Theorem of Algebra, or how to determine the highest degree to consider with the polynomial produced by the Method of Least Squares.
+
+
+
+
+\newpage
+\appendix
+\section*{Appendix A}
+\addcontentsline{toc}{section}{Appendix A}
+This appendix will go into more depth about Gauss' first proof of the Fundamental Theorem of Algebra. Firstly, some notation for complex numbers needs to be introduced. As well as their most common form of \(z = a+bi\) (where \(a \in \mathbb{R}\)), complex numbers can also be written in their modulus-argument form: \(z = r(\cos{\theta} + i\sin{\theta})\), where \(r\) is the modulus and \(\theta\) is the argument. Another way to write complex number is in Euler's form, also using the modulus and argument \(z = re^{i\theta}\), which is derived from the Taylor series for \(e^x\), where \(x\) is replaced by \(ix\).
+
+The conjugate of a complex number is when the imaginary part switches sign, or, on an Argand diagram, is reflected over the \(x-\)axis. For Euler's form, this means that the argument switches sign, assuming that the argument is in the form \(-\pi \leq \theta < \pi\), so:
+\[z = re^{i\theta} \Rightarrow \overline{z} = re^{-i\theta}\]
+This means we can now write \(\overline{f}(z)\) as:
+\begin{align*}
+    \overline{f}(z) &= \overline{c_{N}}z^{N} + \overline{c_{N-1}}z^{N-1} + \cdots + \overline{c_0} \\
+    &= \sum_{r=0}^{n} \overline{C_r} \times z^r \\
+    &= \sum_{r=0}^{n} \overline{a_re^{i\alpha_r}} \times ke^{i\theta} \\
+    &= \sum_{r=0}^{n} a_re^{-i\alpha_r} \times ke^{i\theta} \\
+    &= \sum_{r=0}^{n} ka_r\times e^{-i\alpha_r+i\theta} \\
+    &= \sum_{r=0}^{n} ka_r\times e^{-i(\alpha_r-\theta)} \\
+    &= \sum_{r=0}^{n} ka_r\times \overline{e^{i(\alpha_r-\theta)}} \\
+    &= \sum_{r=0}^n \overline{a_re^{ia_r}\times ke^{-i\theta}} \\
+    &= \sum_{r=0}^n \overline{a_re^{ia_r}\times \overline{ke^{i\theta}}} \\
+    &= \sum_{r=0}^{n} \overline{C_r \times \overline{x^r}} \\
+    &= \overline{c_N\overline{z^N}} + \overline{c_{N-1}\overline{z^{N-1}}} + \cdots + \overline{c_0} \\
+    \overline{f}(z) &= \overline{f(\overline{z})}
+\end{align*}
+Using the original definition of \(\overline{f}(z)\), it will now be shown that, when multiplied by \(f(z)\), the result, let it be \(g(z)\), only has real coefficients:
+\begin{align}
+    g(z) &= f(z)\overline{f}(z) \nonumber\\
+    &= (c_0z^0 + c_1z^1 + \cdots + c_Nz^N)(\overline{c_0}z^0 + \overline{c_1}z^1 + \cdots + \overline{c_N}z^N) \nonumber\\
+    &= [c_0\overline{c_0}z^0 + c_1\overline{c_1}z^2 + \cdots + c_N\overline{c_N}z^{2N}] \label{conjugates} \\
+    &+ [z^1(c_0\overline{c_1} + \overline{c_0}c_1)] \label{z^1} \\
+    &+ [z^2(c_0\overline{c_2} + \overline{c_0}c_2)] \label{z^2} \\
+    &+ [z^3\big((c_0\overline{c_3} + \overline{c_0}c_3) + (c_1\overline{c_2} + \overline{c_1}c_2)\big)] \label{z^3} \\
+    &+ \cdots \nonumber \\
+    &+ [z^{2N-1}\big((c_0\overline{c_{2N-1}} + \overline{c_0}c_{2N+1}) + \cdots + (c_{N-1}\overline{c_{N}} + \overline{c_{N-1}}c_N)\big)] \label{z^2n-1}
+\end{align}
+By considering (\ref{conjugates}), because multiplying \(x\) and \(\overline{x}\) will always give (Re\((x))^2\), all the coefficients will be real. For (\ref{z^1}) to (\ref{z^2n-1}), the coefficients will always be in pairs of \(c_p\overline{c_q}\) and \(\overline{c_p}c_q\), because both ways will be able to make the power of \(z\). Considering arbitrary \(c_p = a+bi\) and \(c_q=c+di\), where \(a,b,c,d \in \mathbb{R}\):
+\begin{align*}
+    c_p\overline{c_q} + \overline{c_p}c_q &= (a+bi)(c-di) + (a-bi)(c+di) \\
+    &= (ac - adi + bci + bd) + (ac + adi - bci + bd)\\
+    &= 2ac + 2bd \\
+    &\in \mathbb{R}
+\end{align*}
+Therefore, each pair will be real, and so the coefficients for each of (\ref{z^1}) to (\ref{z^2n-1}) will also be real. As all the coefficients in the different parts of the expansion are real, \(g(x)\) must have only real coefficients, and from before, it is equal to \(f(z)\overline{f}(z)\) which is also equal to \(f(z)\overline{f(\overline{z})}\). From the assumption that all non-constant polynomials with real coefficients have at least one root, we know that:
+\[g(z_0) = f(z_0)\overline{f}(z_0) = f(z_0)\overline{f(\overline{z_0})} = 0\]
+From the last part, we know that either \(f(z_0)\) or \(\overline{f(\overline{z_0})}\) is equal to zero, and for the latter of the two, if it's equal to zero, the conjugate will also be equal to zero. This means that either \(f(z_0)\) or \(f(\overline{z_0})\) is equal to zero, so the function \(f(z)\) must have a root at either \(z_0\) or \(\overline{z_0}\).
+
+\newpage
+\section*{Appendix B}
+\addcontentsline{toc}{section}{Appendix B}
+
+Below is the entirety of the finished code.
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{label={lst:appendix}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}
+def getinput(axis):
+    while True:
+        try:
+            val = input("Enter " + axis + " value: ")
+            if (axis == "x" and val != "") or axis == "y":
+                int(val)
+        except ValueError:
+            print("This is not a valid input.")
+            continue
+        else:
+            return val
+
+def enterpoints():
+    x = getinput("x")
+    coords = {}
+    while x != "":
+        y = getinput("y")
+        x = float(x)
+        y = float(y)
+        coords[x] = y
+        x = getinput("x")
+    return coords
+
+def leastsquarematrix(data, degree):
+    keys = list(data.keys())
+    val = list(data.values())
+    xpowers = []
+    matrix = []
+    for i in range(degree+1):
+        line = []
+        for j in range(degree+2):
+            line.append(0)
+        matrix.append(line)
+    for i in range(degree*2 +1):
+        value = 0
+        for m in range(len(keys)):
+            value = value + (keys[m]**i)
+        xpowers.append(value)
+    for i in range(degree+1):
+        for j in range(degree+1):
+            index = len(xpowers) - i - j - 1
+            matrix[i][j] = xpowers[index]
+    for i in range(degree+1):
+        ans = 0
+        for m in range(len(keys)):
+            ans = ans + ((keys[m]**(degree-i))*val[m])
+        matrix[i][degree+1] = ans
+    return matrix
+        
+
+def gaussianelim(n,a):
+    x = []
+    for i in range(n):
+        x.append(0)
+    for i in range(n):
+        if a[i][i] == 0.0:
+            print("Zero error detected, this error is most likely caused by"
+            "there not being enough points entered for the degree of x chosen.")
+            break
+        for j in range(i+1, n):
+            ratio = a[j][i]/a[i][i]
+            for k in range(n+1):
+                a[j][k] = a[j][k] - ratio * a[i][k]
+    x[n-1] = a[n-1][n]/a[n-1][n-1]
+    for i in range(n-2,-1,-1):
+        x[i] = a[i][n]
+        for j in range(i+1,n):
+            x[i] = x[i] - a[i][j]*x[j]
+        x[i] = x[i]/a[i][i]
+    print('\nThe equation of the line of best fit is: ')
+    print("y =", end=" ")
+    for i in range(n):
+        power = n - 1 - i
+        if power != 0:
+            print('%0.2fx^%d + ' %(x[i],power), end = '')
+        else:
+            print('%0.2f' %(x[i]))
+
+def enterpoly():
+    while True:
+        try:
+            poly = int(input("Enter the degree of polynomial to which you would"
+            "like to calculate the line of best fit to: "))
+            if poly < 1:
+                print("That is an invalid input. The integer must be positive.")
+                continue
+        except ValueError:
+            print("That is an invalid input. An integer must be entered.")
+            continue
+        else:
+            return poly
+        
+
+def maincode():
+    Title = "*  Least Squares Method  *"
+    print("*"*len(Title))
+    print(Title)
+    print("*"*len(Title))
+    repeat = "y"
+    while repeat == "y":
+        print("Enter the values for your data set.")
+        dataset = enterpoints()
+        poly = enterpoly()
+        matrix = leastsquarematrix(dataset, poly)
+        gaussianelim((poly+1), matrix)
+        repeat = (input("Would you like to find another line of best fit (y/n)? ")).lower()
+        
+maincode()
+
+\end{lstlisting}
+
+
+
+Below is the very short section of code in the first draft which solved the simultaneous equations, using NumPy which contains built in functions to solve simultaneous equations in a matrix.
+
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{label={lst:appendix}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}
+    matrix = np.array([[a1, b1a2, c1b2a3], [b1a2, c1b2a3, c2b3],[c1b2a3, c2b3,c3]])
+    similt = np.array([ans1, ans2, ans3])
+    ans = np.linalg.solve(matrix, similt)
+    print(ans)
+\end{lstlisting}
+
+Below is the section of the second draft which used Gaussian elimination to solve the matrix of simultaneous equations. This draft was an exact algorithm for 3 unknowns and we experimented with using fractions in case it made the algorithm more exact.
+
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{label={lst:appendix}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}
+from fractions import Fraction as frac
+def turnrowto1(row):
+    firstnz = False
+    for i in row:
+        if firstnz == False and i != 0:
+            val = i
+            firstnz = True
+    changeval = frac(1/val)
+    for i in range(len(row)):
+        if row[i]!=0:
+            row[i]= changeval*row[i]
+    return row
+
+def turnrowto0(row1,row2):
+    firstnz = False
+    for i in range(len(row1)):
+        if firstnz == False and row1[i] != 0:
+            val = i
+            firstnz = True
+    changeval = frac(row1[val]/row2[val])
+    newrow = []
+    for i in range(len(row1)):
+        newval = row1[i]-(row2[i]*changeval)
+        newrow.append(newval)
+    return newrow
+
+def elimquad(matrix):
+    matrix[0] = turnrowto1(matrix[0])
+    matrix[2] = turnrowto0(matrix[2],matrix[0])
+    matrix[1] = turnrowto0(matrix[1],matrix[0])
+    matrix[1] = turnrowto1(matrix[1])
+    matrix[2] = turnrowto0(matrix[2],matrix[1])
+    matrix[2] = turnrowto1(matrix[2])
+    return matrix
+\end{lstlisting}
+
+
+Below 3 of the 5 functions that coded the specific matrices for a specific polynomial degree (being 2, 3 and 4 respecively below).
+
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{label={lst:appendix}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}
+
+def quad(data):
+    keys = list(data.keys())
+    val = list(data.values())
+    a1 = 0
+    b1a2 = 0
+    c1b2a3 = 0
+    c2b3 = 0
+    c3 = len(keys)
+    ans1 = 0
+    ans2 = 0
+    ans3 = 0
+    for m in range(len(keys)):
+        a1 = a1 + ((keys[m])**4)
+        b1a2 = b1a2 +((keys[m])**3)
+        c1b2a3 = c1b2a3 + ((keys[m])**2)
+        c2b3 = c2b3 + (keys[m])
+        ans1 = (val[m])*((keys[m])**2) + ans1
+        ans2 = (val[m])*(keys[m]) + ans2
+        ans3 = ans3 + val[m]
+    matrix = [[a1, b1a2, c1b2a3,ans1],
+              [b1a2, c1b2a3, c2b3,ans2],
+              [c1b2a3, c2b3,c3,ans3]]
+    return matrix
+
+def cube(data):
+    keys = list(data.keys())
+    val = list(data.values())
+    a1 = 0
+    b1a2 = 0
+    c1b2a3 = 0
+    d1c2b3a4 = 0
+    d2c3b4 = 0
+    d3c4 = 0
+    d4 = len(keys)
+    ans1 = 0
+    ans2 = 0
+    ans3 = 0
+    ans4 = 0
+    for m in range(len(keys)):
+        a1 = a1 + (keys[m]**6)
+        b1a2 = b1a2 + (keys[m]**5)
+        c1b2a3 = c1b2a3 + (keys[m]**4)
+        d1c2b3a4 = d1c2b3a4 + (keys[m]**3)
+        d2c3b4 = d2c3b4 + (keys[m]**2)
+        d3c4 = d3c4 + keys[m]
+        ans1 = ans1 + ((keys[m]**3)*val[m])
+        ans2 = ans2 + ((keys[m]**2)*val[m])
+        ans3 = ans3 + (keys[m]*val[m])
+        ans4 = ans4 + val[m]
+    matrix = [[a1, b1a2, c1b2a3, d1c2b3a4, ans1],
+              [b1a2, c1b2a3, d1c2b3a4, d2c3b4, ans2],
+              [c1b2a3, d1c2b3a4, d2c3b4, d3c4, ans3],
+              [d1c2b3a4, d2c3b4, d3c4, d4, ans4]]
+    return matrix
+
+def degree4(data):
+    keys = list(data.keys())
+    val = list(data.values())
+    x8 = 0
+    x7 = 0
+    x6 = 0
+    x5 = 0
+    x4 = 0
+    x3 = 0
+    x2 = 0
+    x = 0
+    x4y = 0
+    x3y = 0
+    x2y = 0
+    xy = 0
+    y = 0
+    for m in range(len(keys)):
+        x8 = x8 + (keys[m]**8)
+        x7 = x7 + (keys[m]**7)
+        x6 = x6 + (keys[m]**6)
+        x5 = x5 + (keys[m]**5)
+        x4 = x4 + (keys[m]**4)
+        x3 = x3 + (keys[m]**3)
+        x2 = x2 + (keys[m]**2)
+        x = x + keys[m]
+        x4y = x4y + ((keys[m]**4)*val[m])
+        x3y = x3y + ((keys[m]**3)*val[m])
+        x2y = x2y + ((keys[m]**2)*val[m])
+        xy = xy + (keys[m]*val[m])
+        y = y + val[m]
+    matrix = [[x8, x7, x6, x5, x4, x4y],
+              [x7, x6, x5, x4, x3, x3y],
+              [x6, x5, x4, x3, x2, x2y],
+              [x5, x4, x3, x2, x, xy],
+              [x4, x3, x2, x, len(keys), y]]
+    return matrix
+
+\end{lstlisting}
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{vancouver}
+\bibliography{References}
+\end{document}
